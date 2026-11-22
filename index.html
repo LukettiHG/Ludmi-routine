@@ -1,0 +1,1333 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Rutina de hipertrofia en casa de 8 semanas, con explicación de cada ejercicio y registro de series.">
+<meta name="theme-color" content="#2F6F66">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232F6F66'/%3E%3Cpath d='M18 40h28M22 32v16M42 32v16M14 36v8M50 36v8' stroke='%23fff' stroke-width='4' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+<title>Rutina en casa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@300;400;500&display=swap">
+<style>
+/* Concepto: una columna ancha de lectura, secciones separadas por líneas finas y mucho aire.
+   El acento (verde azulado) aparece solo en etiquetas, barras y estados activos. */
+:root{
+  --bg:#F3F5F3; --surface:#FFFFFF; --ink:#18201D; --muted:#5B6760; --line:#DCE2DE;
+  --accent:#2F6F66; --accent-ink:#FFFFFF; --accent-soft:#E3EFEC;
+  --warn:#9E4B2A; --warn-soft:#F6E8E1; --track:#E4E9E6;
+  --display:'Outfit','Helvetica Neue',Arial,sans-serif; --body:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  --fs-xs:.75rem; --fs-s:.875rem; --fs-m:1rem; --fs-l:1.25rem; --fs-xl:2rem;
+  --gutter:1.5rem;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1412; --surface:#161C19; --ink:#E7ECE9; --muted:#9AA7A0; --line:#27302C;
+    --accent:#7CC0B3; --accent-ink:#0E1513; --accent-soft:#1B2A26;
+    --warn:#E5A07F; --warn-soft:#2B1F19; --track:#212A26; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1412; --surface:#161C19; --ink:#E7ECE9; --muted:#9AA7A0; --line:#27302C;
+  --accent:#7CC0B3; --accent-ink:#0E1513; --accent-soft:#1B2A26;
+  --warn:#E5A07F; --warn-soft:#2B1F19; --track:#212A26; color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 var(--fs-m)/1.6 var(--body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:1.5rem;min-height:3.25rem}
+.brand{font:500 var(--fs-m)/1 var(--display);letter-spacing:.01em;white-space:nowrap}
+.nav{display:flex;gap:1.25rem;overflow-x:auto;scrollbar-width:none;min-width:0;margin-left:auto}
+.nav::-webkit-scrollbar{display:none}
+.nav a{font-size:var(--fs-s);color:var(--muted);text-decoration:none;white-space:nowrap;padding:.9rem 0}
+.nav a:hover{color:var(--ink)}
+section{padding-block:4.5rem 0;scroll-margin-top:3.5rem}
+.hero{padding-block:5rem 1rem}
+.eyebrow{font-size:var(--fs-xs);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin:0 0 1rem}
+h1{font:300 clamp(2.8rem,9vw,5.4rem)/1 var(--display);letter-spacing:-.025em;margin:0 0 1.5rem;text-wrap:balance}
+h2{font:300 clamp(1.7rem,4.5vw,2.4rem)/1.15 var(--display);letter-spacing:-.015em;margin:0 0 .75rem;text-wrap:balance}
+h3{font:500 var(--fs-l)/1.25 var(--display);margin:0}
+.lead{font-size:1.15rem;color:var(--muted);max-width:38rem;margin:0}
+.sub{color:var(--muted);max-width:42rem;margin:0 0 2rem}
+.facts{display:flex;flex-wrap:wrap;gap:.5rem 2rem;margin:2.5rem 0 0;padding:1.25rem 0 0;border-top:1px solid var(--line);list-style:none}
+.facts li{font-size:var(--fs-s);color:var(--muted)}
+.facts b{display:block;font:400 var(--fs-xl)/1.1 var(--display);color:var(--ink);letter-spacing:-.01em}
+
+/* semana */
+.week{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.wd{padding:1.25rem 1rem 1.25rem 0;min-width:0}
+.wd + .wd{padding-left:1rem;border-left:1px solid var(--line)}
+.wd .d{font-size:var(--fs-xs);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.wd .t{font:500 var(--fs-l)/1.2 var(--display);margin:.35rem 0 .25rem}
+.wd .f{font-size:var(--fs-s);color:var(--muted);min-height:2.6em}
+.wd .n{font-size:var(--fs-s);margin-top:.75rem;font-variant-numeric:tabular-nums}
+.pbar{height:4px;background:var(--track);border-radius:2px;margin-top:.4rem;overflow:hidden}
+.pbar i{display:block;height:100%;background:var(--accent)}
+.pbar.torso i{background:var(--muted)}
+.rest{font-size:var(--fs-s);color:var(--muted);margin:.9rem 0 0}
+.bars{margin-top:3rem}
+.bars h3{margin-bottom:.35rem}
+.bars .cap{font-size:var(--fs-s);color:var(--muted);margin:0 0 1.25rem;max-width:42rem}
+.brow{display:grid;grid-template-columns:minmax(7.5rem,12rem) minmax(0,1fr) 2.6rem;gap:.75rem;align-items:center;padding:.32rem 0;font-size:var(--fs-s)}
+.brow .lab{min-width:0}
+.track{position:relative;height:8px;background:var(--track);border-radius:4px}
+.track i{position:absolute;inset:0 auto 0 0;background:var(--accent);border-radius:4px}
+.track u{position:absolute;top:-5px;bottom:-5px;width:0;border-left:1px dashed var(--muted);text-decoration:none}
+.brow .v{text-align:right;font-variant-numeric:tabular-nums}
+.legend{font-size:var(--fs-xs);color:var(--muted);margin:.9rem 0 0;display:flex;align-items:center;gap:.5rem}
+.legend span{display:inline-block;width:0;height:12px;border-left:1px dashed var(--muted)}
+
+/* elementos */
+.items{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 3rem;border-top:1px solid var(--line)}
+.item{padding:1.1rem 0;border-bottom:1px solid var(--line);min-width:0}
+.item h3{font-size:1.05rem}
+.item .use{font-size:var(--fs-s);margin:.25rem 0 0}
+.item .tip{font-size:var(--fs-s);color:var(--muted);margin:.25rem 0 0}
+.foot{font-size:var(--fs-s);color:var(--muted);margin:1rem 0 0}
+
+/* rutina */
+.tabs{display:flex;gap:.35rem;margin-bottom:1.5rem;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab,.rtab{appearance:none;border:1px solid var(--line);background:transparent;color:var(--muted);font:500 var(--fs-s)/1 var(--body);padding:.7rem 1rem;border-radius:999px;cursor:pointer;white-space:nowrap}
+.tab:hover,.rtab:hover{color:var(--ink);border-color:var(--muted)}
+.tab[aria-selected="true"],.rtab[aria-selected="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.panel-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:.25rem 1rem;margin-bottom:.75rem}
+.panel-h .meta{font-size:var(--fs-s);color:var(--muted)}
+.exs{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.ex{display:grid;grid-template-columns:2rem minmax(0,1fr) auto;gap:.25rem 1rem;padding:1rem 0;border-bottom:1px solid var(--line);align-items:start}
+.ex .no{color:var(--muted);font:300 1.25rem/1.3 var(--display);font-variant-numeric:tabular-nums}
+.ex .nm{font-weight:500;line-height:1.35}
+.ex .nm a{text-decoration:none;border-bottom:1px solid var(--line)}
+.ex .nm a:hover{border-color:var(--accent);color:var(--accent)}
+.ex .nt{font-size:var(--fs-s);color:var(--muted);margin-top:.2rem}
+.ex .sr{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.ex .sr b{font:400 1.15rem/1.3 var(--display)}
+.ex .sr span{display:block;font-size:var(--fs-xs);color:var(--muted)}
+.note-w12{font-size:var(--fs-s);color:var(--muted);margin:1rem 0 0}
+
+/* guía */
+.safety{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;list-style:none;margin:0 0 2rem;padding:1rem 1.25rem;background:var(--accent-soft);border-radius:12px;font-size:var(--fs-s)}
+.safety li{display:flex;gap:.5rem}
+.safety li::before{content:"";width:6px;height:6px;margin-top:.55em;border-radius:50%;background:var(--accent);flex:none}
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-bottom:1.25rem}
+.chip,.rchip{appearance:none;border:1px solid var(--line);background:transparent;color:var(--muted);font:500 var(--fs-s)/1 var(--body);padding:.55rem .9rem;border-radius:999px;cursor:pointer}
+.chip:hover,.rchip:hover{color:var(--ink);border-color:var(--muted)}
+.chip[aria-pressed="true"],.rchip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.linkbtn{appearance:none;border:0;background:none;color:var(--accent);font:500 var(--fs-s)/1 var(--body);cursor:pointer;padding:.55rem .25rem;margin-left:auto}
+.linkbtn:hover{text-decoration:underline}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;align-items:start}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;min-width:0}
+.card[hidden]{display:none}
+.card summary{list-style:none;cursor:pointer;padding:1rem 3rem 1rem 1.15rem;position:relative}
+.card summary::-webkit-details-marker{display:none}
+.card summary::after{content:"";position:absolute;right:1.15rem;top:1.35rem;width:.55rem;height:.55rem;border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);transform:rotate(45deg);transition:transform .15s}
+.card[open] summary::after{transform:rotate(-135deg);top:1.6rem}
+.card summary .g{font-size:var(--fs-xs);letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.card summary h3{margin:.2rem 0 .15rem}
+.card summary .m{font-size:var(--fs-s);color:var(--muted)}
+.card .body{padding:0 1.15rem 1.25rem;border-top:1px solid var(--line)}
+.blk{margin-top:1rem}
+.blk h4{font-size:var(--fs-xs);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:0 0 .35rem}
+.blk p,.blk li{font-size:var(--fs-s);margin:0}
+.blk ol,.blk ul{margin:0;padding-left:1.25rem;display:grid;gap:.3rem}
+.blk ul.minus{list-style:none;padding-left:0}
+.blk ul.minus li{padding-left:1.1rem;position:relative}
+.blk ul.minus li::before{content:"";position:absolute;left:0;top:.7em;width:.55rem;border-top:1.5px solid var(--warn)}
+.els{display:flex;flex-wrap:wrap;gap:.35rem}
+.els span{font-size:var(--fs-xs);background:var(--accent-soft);color:var(--ink);padding:.25rem .6rem;border-radius:999px}
+.ytw{display:grid;gap:.6rem;margin-top:.4rem}
+.ytw div{display:grid;grid-template-columns:2.2rem minmax(0,1fr);gap:.75rem;align-items:start}
+.ytw b{font:300 2.2rem/1 var(--display);color:var(--accent)}
+.cue{font-size:var(--fs-s);padding:.7rem .9rem;background:var(--bg);border-radius:10px}
+.days{font-size:var(--fs-xs);color:var(--muted);margin-top:1rem}
+
+/* registro */
+.rg-status{display:flex;gap:.65rem;align-items:flex-start;font-size:var(--fs-s);color:var(--muted);margin:0 0 1.25rem;padding:.7rem .9rem;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.rg-status::before{content:"";flex:none;width:8px;height:8px;margin-top:.55em;border-radius:50%;background:var(--muted)}
+.rg-status[data-k="ok"]::before{background:var(--accent)}
+.rg-status[data-k="warn"]::before,.rg-status[data-k="bad"]::before{background:var(--warn)}
+.rg-status[data-k="bad"]{background:var(--warn-soft);color:var(--ink)}
+.rg-pick{display:grid;gap:.6rem;margin:1.25rem 0 .75rem}
+.rg-pick .row{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center}
+.rg-pick .row>span{font-size:var(--fs-xs);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);width:4.5rem;flex:none}
+.rchip.sq{min-width:2.6rem;text-align:center}
+.rchip.done{border-color:var(--accent);color:var(--accent)}
+.rchip.done[aria-pressed="true"]{color:var(--bg)}
+.rg-prog{font-size:var(--fs-s);color:var(--muted);margin:0 0 1.25rem;font-variant-numeric:tabular-nums}
+.rg-dayh{display:flex;flex-wrap:wrap;align-items:baseline;gap:.25rem 1rem;margin-bottom:.75rem}
+.rg-dayh .meta{font-size:var(--fs-s);color:var(--muted)}
+.rg-exs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;align-items:start}
+.rg-ex{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1rem 1.15rem 1.15rem;min-width:0}
+.rg-ex-h{display:grid;grid-template-columns:1.6rem minmax(0,1fr);gap:.5rem}
+.rg-ex-h .no{color:var(--muted);font:300 1.25rem/1.3 var(--display);font-variant-numeric:tabular-nums}
+.rg-ex-t .nm{font-weight:500;line-height:1.35}
+.rg-ex-t .nm a{text-decoration:none;border-bottom:1px solid var(--line)}
+.rg-ex-t .nm a:hover{border-color:var(--accent);color:var(--accent)}
+.rg-ex-t .plan{font-size:var(--fs-xs);color:var(--muted);margin-top:.25rem}
+.rg-ex-t .nt{font-size:var(--fs-xs);color:var(--muted);margin-top:.15rem}
+.prev{font-size:var(--fs-xs);color:var(--muted);margin-top:.5rem;font-variant-numeric:tabular-nums}
+.prev:empty{display:none}
+.rg-sets{display:grid;grid-template-columns:2.2rem repeat(3,minmax(0,1fr));gap:.45rem .5rem;margin-top:.7rem;align-items:center}
+.rg-sets .lab{font-size:var(--fs-xs);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:center}
+.rg-sets .sn{font:300 1.15rem/1 var(--display);color:var(--muted);text-align:center}
+.rg-sets .na{text-align:center;color:var(--muted)}
+.rg-sets .sn.off{opacity:.45}
+.rg-sets .offtxt{grid-column:2 / -1;display:flex;align-items:center;justify-content:center;height:2.6rem;border:1px dashed var(--line);border-radius:10px;font-size:var(--fs-xs);color:var(--muted);text-align:center;padding:0 .5rem}
+.rg-wa{display:inline-flex;align-items:center;margin-top:1rem;padding:.8rem 1.2rem;border-radius:999px;background:var(--accent);color:var(--accent-ink);font:500 var(--fs-s)/1.2 var(--body);text-decoration:none}
+.rg-wa[aria-disabled="true"],.rg-wa[href="#"]{background:var(--track);color:var(--muted);cursor:default}
+.rg-wa-row{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem 1rem;margin-top:1rem}
+.rg-wa-row .rg-wa{margin-top:0}
+.rg-wa-row .linkbtn{margin-left:0}
+.rg-week{margin-top:1rem}
+textarea.rg-copy{display:block;width:100%;height:11rem;margin-top:.75rem;font:12px/1.4 ui-monospace,Menlo,Consolas,monospace;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:.6rem}
+.rg-wa:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.rg-wa-note{font-size:var(--fs-xs);color:var(--muted);margin:.5rem 0 0}
+.rg-adapt{background:var(--accent-soft);border-radius:12px;padding:.75rem 1rem;margin:0 0 1rem;font-size:var(--fs-s);line-height:1.5}
+.rg-adapt b{font-weight:600}
+.in{width:100%;min-width:0;height:2.6rem;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:10px;padding:0 .5rem;font:400 1rem/1 var(--body);text-align:center;font-variant-numeric:tabular-nums}
+.in.txt{text-align:left;padding:0 .75rem}
+.in:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+.in[aria-invalid="true"]{border-color:var(--warn);background:var(--warn-soft)}
+.in::placeholder{color:var(--muted);opacity:.7}
+.rg-ex .in.txt{margin-top:.6rem}
+.hint{font-size:var(--fs-xs);color:var(--muted);margin-top:.6rem}
+.flag{font-size:var(--fs-s);font-weight:600;color:var(--accent);margin-top:.5rem}
+.flag:empty{display:none}
+.rg-ses,.rg-br{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.15rem}
+.rg-ses{margin-top:1rem}
+.rg-br{margin-bottom:.6rem}
+.rg-ses h4,.rg-br h4{margin:0 0 .8rem;font-size:var(--fs-xs);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.rg-fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(8.25rem,1fr));gap:.8rem}
+.fld{display:grid;gap:.3rem;font-size:var(--fs-xs);color:var(--muted);min-width:0}
+.fld.wide{grid-column:1 / -1}
+.rg-alert{font-size:var(--fs-s);font-weight:600;color:var(--warn);margin-top:.8rem}
+.rg-alert:empty{display:none}
+.chg{font-size:var(--fs-s);color:var(--accent);margin-top:.7rem;font-variant-numeric:tabular-nums}
+.chg:empty{display:none}
+.rg-tools{display:flex;flex-wrap:wrap;align-items:center;gap:.2rem 1.25rem;margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--line)}
+.rg-tools .lab{font-size:var(--fs-xs);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.rg-tools .linkbtn{margin-left:0}
+.rg-toast{font-size:var(--fs-s);color:var(--muted);min-height:1.4em;margin:.5rem 0 0}
+#rg-out{display:block;width:100%;height:9rem;margin-top:.75rem;font:12px/1.4 ui-monospace,Menlo,Consolas,monospace;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:.6rem}
+
+/* reglas */
+.rules{border-top:1px solid var(--line)}
+.rule{display:grid;grid-template-columns:minmax(0,12rem) minmax(0,1fr);gap:.25rem 2rem;padding:1.15rem 0;border-bottom:1px solid var(--line)}
+.rule h3{font-size:1.05rem}
+.rule p{margin:0 0 .5rem;font-size:var(--fs-s)}
+.rule p:last-child{margin-bottom:0}
+.rir{display:flex;flex-wrap:wrap;gap:.4rem;margin:.4rem 0 .6rem}
+.rir span{font-size:var(--fs-xs);border:1px solid var(--line);border-radius:8px;padding:.3rem .6rem}
+.rir b{font-family:var(--display);font-size:var(--fs-s);margin-right:.25rem}
+.care{margin-top:3rem;padding:1.5rem 1.5rem 1.4rem;background:var(--warn-soft);border-radius:14px}
+.care h3{margin-bottom:.75rem}
+.care p,.care li{font-size:var(--fs-s);margin:0 0 .6rem}
+.care ul{padding-left:1.1rem;margin:.25rem 0 .6rem}
+.care .l{font-size:var(--fs-xs);letter-spacing:.12em;text-transform:uppercase;color:var(--warn);font-weight:600;margin-bottom:.4rem}
+
+/* fuentes */
+.refs{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.refs li{padding:.8rem 0;border-bottom:1px solid var(--line);font-size:var(--fs-s)}
+.refs li span{color:var(--muted)}
+.refs a{color:var(--accent);word-break:break-word}
+.small{font-size:var(--fs-s);color:var(--muted);max-width:44rem}
+footer{padding-block:4rem 5rem;margin-top:4rem;border-top:1px solid var(--line)}
+footer p{font-size:var(--fs-xs);color:var(--muted);max-width:46rem;margin:0 0 .5rem}
+
+@media (max-width:899px){
+  .week{grid-template-columns:minmax(0,1fr)}
+  .wd{display:grid;grid-template-columns:6rem minmax(0,1fr) auto;gap:.1rem 1rem;padding:1rem 0;align-items:center}
+  .wd + .wd{padding-left:0;border-left:0;border-top:1px solid var(--line)}
+  .wd .d{grid-column:1;grid-row:1 / span 2}
+  .wd .t{grid-column:2;grid-row:1;margin:0}
+  .wd .f{grid-column:2;grid-row:2;min-height:0}
+  .wd .n{grid-column:3;grid-row:1 / span 2;margin:0;text-align:right}
+  .wd .pbar{grid-column:1 / -1;grid-row:3;margin-top:.6rem}
+}
+@media (max-width:760px){
+  section{padding-block-start:3.5rem}
+  .hero{padding-block-start:3rem}
+  .items,.cards,.rg-exs{grid-template-columns:minmax(0,1fr)}
+  .rule{grid-template-columns:minmax(0,1fr)}
+  .brow{grid-template-columns:minmax(6.5rem,9rem) minmax(0,1fr) 2.4rem}
+  .top .wrap{gap:1rem}
+}
+@media (max-width:480px){
+  .facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem 1rem}
+  .wd{grid-template-columns:minmax(0,1fr) auto}
+  .wd .d{grid-column:1 / -1;grid-row:1}
+  .wd .t{grid-column:1;grid-row:2}
+  .wd .n{grid-column:2;grid-row:2}
+  .wd .f{grid-column:1 / -1;grid-row:3;margin-top:.1rem}
+  .wd .pbar{grid-row:4}
+  .ex{grid-template-columns:1.6rem minmax(0,1fr)}
+  .ex .sr{grid-column:2;text-align:left}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card summary::after{transition:none}}
+</style>
+<style>body{margin:0}img{max-width:100%}</style>
+</head>
+<body>
+<noscript><p style="margin:1rem;padding:1rem;border:1px solid #9E4B2A">Esta página necesita JavaScript para el registro y para abrir los ejercicios.</p></noscript>
+<header class="top"><div class="wrap"><span class="brand">Rutina en casa</span><nav class="nav" aria-label="Secciones"><a href="#semana">Semana</a><a href="#elementos">Elementos</a><a href="#rutina">Rutina</a><a href="#registro">Registro</a><a href="#ejercicios">Ejercicios</a><a href="#reglas">Reglas</a></nav></div></header>
+<main>
+<div class="wrap hero"><p class="eyebrow">Programa de 8 semanas</p><h1>Rutina<br>en casa</h1><p class="lead">Piernas y glúteos primero. Espalda para postura, y brazos y abdomen en dosis chicas. Todo con mancuernas, silla, cama y escalón.</p><ul class="facts"><li><b>5</b>días por semana</li><li><b>45</b>minutos por sesión</li><li><b>84</b>series por semana</li><li><b>8</b>semanas</li></ul></div>
+<section id="semana"><div class="wrap"><p class="eyebrow">La semana</p><h2>Tres días de piernas, dos de torso</h2><p class="sub">45 series de piernas y 39 de torso. Las sesiones de piernas quedan separadas por unas 48 horas.</p>
+<div class="week">
+<div class="wd"><div class="d">Lunes</div><div class="t">Piernas A</div><div class="f">Glúteo y cuádriceps</div><div class="n">14 series</div><div class="pbar"><i style="width:70%"></i></div></div>
+<div class="wd"><div class="d">Martes</div><div class="t">Torso A</div><div class="f">Espalda y core</div><div class="n">20 series</div><div class="pbar torso"><i style="width:100%"></i></div></div>
+<div class="wd"><div class="d">Miércoles</div><div class="t">Piernas B</div><div class="f">Glúteo, isquios y aductores</div><div class="n">15 series</div><div class="pbar"><i style="width:75%"></i></div></div>
+<div class="wd"><div class="d">Jueves</div><div class="t">Torso B</div><div class="f">Espalda postural, brazos y abdomen</div><div class="n">19 series</div><div class="pbar torso"><i style="width:95%"></i></div></div>
+<div class="wd"><div class="d">Viernes</div><div class="t">Piernas C</div><div class="f">Cuádriceps, isquios, aductores y glúteo</div><div class="n">16 series</div><div class="pbar"><i style="width:80%"></i></div></div>
+</div><p class="rest">Sábado y domingo: descanso, con caminata libre. La barra de dominadas de la plaza no se usa.</p>
+<div class="bars"><h3>Series por músculo, por semana</h3><p class="cap">Series fraccionales: una serie directa cuenta 1 y una indirecta (el músculo ayuda, pero no es el principal) cuenta 0,5. En las semanas 1 y 2 se hacen 54 series en total, con 2 por ejercicio.</p>
+<div class="brow"><span class="lab">Glúteo mayor</span><span class="track"><i style="width:91.7%"></i><u style="left:16.7%"></u></span><span class="v">22,0</span></div>
+<div class="brow"><span class="lab">Cuádriceps</span><span class="track"><i style="width:58.3%"></i><u style="left:16.7%"></u></span><span class="v">14,0</span></div>
+<div class="brow"><span class="lab">Espalda (dorsal y alta)</span><span class="track"><i style="width:58.3%"></i><u style="left:16.7%"></u></span><span class="v">14,0</span></div>
+<div class="brow"><span class="lab">Deltoide posterior</span><span class="track"><i style="width:47.9%"></i><u style="left:16.7%"></u></span><span class="v">11,5</span></div>
+<div class="brow"><span class="lab">Isquios</span><span class="track"><i style="width:41.7%"></i><u style="left:16.7%"></u></span><span class="v">10,0</span></div>
+<div class="brow"><span class="lab">Core</span><span class="track"><i style="width:37.5%"></i><u style="left:16.7%"></u></span><span class="v">9,0</span></div>
+<div class="brow"><span class="lab">Bíceps</span><span class="track"><i style="width:35.4%"></i><u style="left:16.7%"></u></span><span class="v">8,5</span></div>
+<div class="brow"><span class="lab">Aductores</span><span class="track"><i style="width:33.3%"></i><u style="left:16.7%"></u></span><span class="v">8,0</span></div>
+<div class="brow"><span class="lab">Gemelos</span><span class="track"><i style="width:25.0%"></i><u style="left:16.7%"></u></span><span class="v">6,0</span></div>
+<div class="brow"><span class="lab">Tríceps</span><span class="track"><i style="width:20.8%"></i><u style="left:16.7%"></u></span><span class="v">5,0</span></div>
+<div class="brow"><span class="lab">Deltoide anterior</span><span class="track"><i style="width:18.8%"></i><u style="left:16.7%"></u></span><span class="v">4,5</span></div>
+<div class="brow"><span class="lab">Pecho</span><span class="track"><i style="width:14.6%"></i><u style="left:16.7%"></u></span><span class="v">3,5</span></div>
+<div class="brow"><span class="lab">Erectores</span><span class="track"><i style="width:12.5%"></i><u style="left:16.7%"></u></span><span class="v">3,0</span></div>
+<div class="brow"><span class="lab">Glúteo medio</span><span class="track"><i style="width:8.3%"></i><u style="left:16.7%"></u></span><span class="v">2,0</span></div>
+<p class="legend"><span></span>Línea de puntos: mínimo efectivo ≈ 4 series fraccionales (Pelland 2026). Glúteo medio y erectores quedan por debajo a propósito.</p></div></div></section>
+<section id="elementos"><div class="wrap"><p class="eyebrow">Elementos</p><h2>Lo que necesitás</h2><p class="sub">Nada de máquinas. Cada ejercicio indica más abajo qué elementos usa.</p><div class="items">
+<div class="item"><h3>Mancuernas con discos</h3><p class="use">Casi todos los ejercicios de pierna y de espalda.</p><p class="tip">Cada una llega a ≈ 17,5 kg (35 kg en total). Armá la carga una vez por sesión: las barras no se unen.</p></div>
+<div class="item"><h3>Silla firme</h3><p class="use">Sentadilla búlgara, hip thrust, press de hombros y flexiones.</p><p class="tip">Probá que no se deslice antes de cargar. Si podés, apoyala contra la pared.</p></div>
+<div class="item"><h3>Cama con respaldo</h3><p class="use">Hip thrust, remo a una mano, superman y Y-T-W.</p><p class="tip">Para el hip thrust y el remo, el borde tiene que quedar firme.</p></div>
+<div class="item"><h3>Escalón o escalera</h3><p class="use">Step-up y elevación de talones.</p><p class="tip">Firme y que no resbale.</p></div>
+<div class="item"><h3>Pared y piso</h3><p class="use">Equilibrio en los talones; dead bug, plancha lateral, abducción y curl de isquios.</p><p class="tip">Una colchoneta o una toalla en el piso ayuda para los ejercicios boca abajo.</p></div>
+<div class="item"><h3>Toalla o medias</h3><p class="use">Curl de isquios (para deslizar) y apoyo de la frente en Y-T-W.</p><p class="tip">El curl se hace en un piso liso.</p></div>
+<div class="item"><h3>Libros firmes</h3><p class="use">Apoyo bajo para los pies en el hip thrust con pies elevados.</p><p class="tip">Solo como superficie baja y firme; no para apoyarte en equilibrio si se pueden deslizar.</p></div>
+<div class="item"><h3>Reloj o cronómetro</h3><p class="use">Descanso de 60–90 s y plancha lateral de 20–40 s.</p></div>
+</div></div></section>
+<section id="rutina"><div class="wrap"><p class="eyebrow">La rutina</p><h2>Día por día</h2><p class="sub">Tocá el nombre de un ejercicio para ver cómo se hace. RIR es cuántas repeticiones te quedaban al terminar la serie.</p>
+<div class="tabs" role="tablist" aria-label="Días">
+<button class="tab" role="tab" id="tab-0" aria-controls="panel-0" aria-selected="true" data-i="0">Lunes</button>
+<button class="tab" role="tab" id="tab-1" aria-controls="panel-1" aria-selected="false" data-i="1">Martes</button>
+<button class="tab" role="tab" id="tab-2" aria-controls="panel-2" aria-selected="false" data-i="2">Miércoles</button>
+<button class="tab" role="tab" id="tab-3" aria-controls="panel-3" aria-selected="false" data-i="3">Jueves</button>
+<button class="tab" role="tab" id="tab-4" aria-controls="panel-4" aria-selected="false" data-i="4">Viernes</button>
+</div>
+<div class="panel" role="tabpanel" id="panel-0" aria-labelledby="tab-0">
+<div class="panel-h"><h3>Piernas A</h3><span class="meta">Glúteo y cuádriceps · 14 series</span><button class="linkbtn" type="button" data-log="0">Anotar este día →</button></div><ol class="exs">
+<li class="ex"><span class="no">1</span><div><div class="nm"><a href="#ej-bulgara" data-go="bulgara">Sentadilla búlgara</a></div><div class="nt">Semanas 1–2: zancada estática (pie trasero en el piso)</div></div><div class="sr"><b>4 × 10–15</b><span>por pierna · RIR 1–2</span></div></li>
+<li class="ex"><span class="no">2</span><div><div class="nm"><a href="#ej-hipthrust" data-go="hipthrust">Hip thrust</a></div><div class="nt">Espalda alta en la silla o la cama; pausa de 1 s arriba</div></div><div class="sr"><b>4 × 10–15</b><span>RIR 1–2</span></div></li>
+<li class="ex"><span class="no">3</span><div><div class="nm"><a href="#ej-stepup" data-go="stepup">Step-up</a></div><div class="nt">Rodilla a ≈ 90° arriba</div></div><div class="sr"><b>3 × 10–12</b><span>por pierna · RIR 1–2</span></div></li>
+<li class="ex"><span class="no">4</span><div><div class="nm"><a href="#ej-talones" data-go="talones">Elevación de talones</a></div><div class="nt">Pausa de 1 s abajo; a una pierna cuando sea fácil</div></div><div class="sr"><b>3 × 12–20</b><span>RIR 0–1</span></div></li>
+</ol><p class="note-w12">Semanas 1 y 2: 8 series en total (2 por ejercicio), RIR 3 y bajada lenta.</p></div>
+<div class="panel" role="tabpanel" id="panel-1" aria-labelledby="tab-1" hidden>
+<div class="panel-h"><h3>Torso A</h3><span class="meta">Espalda y core · 20 series</span><button class="linkbtn" type="button" data-log="1">Anotar este día →</button></div><ol class="exs">
+<li class="ex"><span class="no">1</span><div><div class="nm"><a href="#ej-remo1" data-go="remo1">Remo a una mano</a></div><div class="nt">Mismas repeticiones en ambos lados; empezá por el lado débil</div></div><div class="sr"><b>4 × 10–15</b><span>por lado · RIR 1–2</span></div></li>
+<li class="ex"><span class="no">2</span><div><div class="nm"><a href="#ej-remoinc" data-go="remoinc">Remo inclinado con 2 mancuernas</a></div><div class="nt">Si molesta la zona lumbar, volvé al remo a una mano</div></div><div class="sr"><b>4 × 10–15</b><span>RIR 1–2</span></div></li>
+<li class="ex"><span class="no">3</span><div><div class="nm"><a href="#ej-superman" data-go="superman">Superman</a></div><div class="nt">Pausa de 2 s arriba; frená si duele la zona lumbar</div></div><div class="sr"><b>3 × 10–15</b><span>RIR 1–2</span></div></li>
+<li class="ex"><span class="no">4</span><div><div class="nm"><a href="#ej-aperturas" data-go="aperturas">Aperturas posteriores inclinada</a></div><div class="nt">Codos levemente flexionados; sin balanceo</div></div><div class="sr"><b>3 × 12–20</b><span>RIR 0–1</span></div></li>
+<li class="ex"><span class="no">5</span><div><div class="nm"><a href="#ej-plancha" data-go="plancha">Plancha lateral</a></div><div class="nt">Mismo tiempo en ambos lados</div></div><div class="sr"><b>3 × 20–40 s</b><span>por lado · sin RIR</span></div></li>
+<li class="ex"><span class="no">6</span><div><div class="nm"><a href="#ej-deadbug" data-go="deadbug">Dead bug</a></div><div class="nt">Zona lumbar apoyada en el piso</div></div><div class="sr"><b>3 × 8–10</b><span>por lado · RIR 1–2</span></div></li>
+</ol><p class="note-w12">Semanas 1 y 2: 12 series en total (2 por ejercicio), RIR 3 y bajada lenta.</p></div>
+<div class="panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2" hidden>
+<div class="panel-h"><h3>Piernas B</h3><span class="meta">Glúteo, isquios y aductores · 15 series</span><button class="linkbtn" type="button" data-log="2">Anotar este día →</button></div><ol class="exs">
+<li class="ex"><span class="no">1</span><div><div class="nm"><a href="#ej-pmr" data-go="pmr">Peso muerto rumano con 2 mancuernas</a></div><div class="nt">Columna neutra; bajá hasta donde la mantenga</div></div><div class="sr"><b>4 × 10–15</b><span>RIR 1–2</span></div></li>
+<li class="ex"><span class="no">2</span><div><div class="nm"><a href="#ej-hipthrust" data-go="hipthrust">Hip thrust a una pierna</a></div><div class="nt">Un pie apoyado; la cadera no gira</div></div><div class="sr"><b>3 × 8–12</b><span>por pierna · RIR 1–2</span></div></li>
+<li class="ex"><span class="no">3</span><div><div class="nm"><a href="#ej-sumo" data-go="sumo">Sentadilla sumo con 2 mancuernas</a></div><div class="nt">Mancuernas colgando; bajada de 3 s</div></div><div class="sr"><b>3 × 12–20</b><span>RIR 1–2</span></div></li>
+<li class="ex"><span class="no">4</span><div><div class="nm"><a href="#ej-curlisq" data-go="curlisq">Curl de isquios con toalla</a></div><div class="nt">Recorrido corto al inicio</div></div><div class="sr"><b>3 × 8–15</b><span>RIR 1–2</span></div></li>
+<li class="ex"><span class="no">5</span><div><div class="nm"><a href="#ej-abduccion" data-go="abduccion">Abducción de cadera acostada</a></div><div class="nt">Pelvis estable, sin rotar</div></div><div class="sr"><b>2 × 15–25</b><span>por lado · RIR 0–1</span></div></li>
+</ol><p class="note-w12">Semanas 1 y 2: 10 series en total (2 por ejercicio), RIR 3 y bajada lenta.</p></div>
+<div class="panel" role="tabpanel" id="panel-3" aria-labelledby="tab-3" hidden>
+<div class="panel-h"><h3>Torso B</h3><span class="meta">Espalda postural, brazos y abdomen · 19 series</span><button class="linkbtn" type="button" data-log="3">Anotar este día →</button></div><ol class="exs">
+<li class="ex"><span class="no">1</span><div><div class="nm"><a href="#ej-remoinc" data-go="remoinc">Remo con 2 mancuernas, pausa de 2 s</a></div><div class="nt">Apretá los omóplatos en la pausa</div></div><div class="sr"><b>3 × 10–12</b><span>RIR 1–2</span></div></li>
+<li class="ex"><span class="no">2</span><div><div class="nm"><a href="#ej-ytw" data-go="ytw">Y-T-W boca abajo</a></div><div class="nt">Sin peso al inicio; una repetición = Y + T + W</div></div><div class="sr"><b>3 × 8–12</b><span>RIR 1–2</span></div></li>
+<li class="ex"><span class="no">3</span><div><div class="nm"><a href="#ej-pressh" data-go="pressh">Press de hombros sentada</a></div><div class="nt">Espalda apoyada, sin arquear</div></div><div class="sr"><b>2 × 8–12</b><span>RIR 1–2</span></div></li>
+<li class="ex"><span class="no">4</span><div><div class="nm"><a href="#ej-flex" data-go="flex">Flexiones (silla o rodillas)</a></div><div class="nt">Cuerpo en línea</div></div><div class="sr"><b>2 × 8–15</b><span>RIR 1–2</span></div></li>
+<li class="ex"><span class="no">5</span><div><div class="nm"><a href="#ej-curlb" data-go="curlb">Curl de bíceps alternado</a></div><div class="nt">Sin balanceo</div></div><div class="sr"><b>3 × 10–15</b><span>RIR 0–1</span></div></li>
+<li class="ex"><span class="no">6</span><div><div class="nm"><a href="#ej-flexc" data-go="flexc">Flexiones cerradas (silla o rodillas)</a></div><div class="nt">Manos juntas bajo el pecho</div></div><div class="sr"><b>3 × 8–15</b><span>RIR 0–1</span></div></li>
+<li class="ex"><span class="no">7</span><div><div class="nm"><a href="#ej-crunch" data-go="crunch">Crunch en el piso</a></div><div class="nt">Movimiento corto y controlado</div></div><div class="sr"><b>3 × 12–20</b><span>RIR 1</span></div></li>
+</ol><p class="note-w12">Semanas 1 y 2: 14 series en total (2 por ejercicio), RIR 3 y bajada lenta.</p></div>
+<div class="panel" role="tabpanel" id="panel-4" aria-labelledby="tab-4" hidden>
+<div class="panel-h"><h3>Piernas C</h3><span class="meta">Cuádriceps, isquios, aductores y glúteo · 16 series</span><button class="linkbtn" type="button" data-log="4">Anotar este día →</button></div><ol class="exs">
+<li class="ex"><span class="no">1</span><div><div class="nm"><a href="#ej-zrev" data-go="zrev">Zancada reversa</a></div><div class="nt">Paso largo hacia atrás</div></div><div class="sr"><b>4 × 10–12</b><span>por pierna · RIR 1–2</span></div></li>
+<li class="ex"><span class="no">2</span><div><div class="nm"><a href="#ej-pmr" data-go="pmr">Peso muerto rumano, bajada de 3 s</a></div><div class="nt">Cuando llegue al techo de carga: a una pierna con apoyo en la pared</div></div><div class="sr"><b>3 × 10–15</b><span>RIR 1–2</span></div></li>
+<li class="ex"><span class="no">3</span><div><div class="nm"><a href="#ej-hipthrust" data-go="hipthrust">Hip thrust con pies elevados</a></div><div class="nt">Pies sobre silla, escalón o libros firmes</div></div><div class="sr"><b>3 × 12–20</b><span>RIR 1–2</span></div></li>
+<li class="ex"><span class="no">4</span><div><div class="nm"><a href="#ej-zlat" data-go="zlat">Zancada lateral</a></div><div class="nt">Pierna de apoyo con la cadera atrás</div></div><div class="sr"><b>3 × 8–12</b><span>por lado · RIR 1–2</span></div></li>
+<li class="ex"><span class="no">5</span><div><div class="nm"><a href="#ej-talones" data-go="talones">Elevación de talones</a></div><div class="nt">A una pierna cuando sea fácil</div></div><div class="sr"><b>3 × 15–25</b><span>RIR 0–1</span></div></li>
+</ol><p class="note-w12">Semanas 1 y 2: 10 series en total (2 por ejercicio), RIR 3 y bajada lenta.</p></div>
+</div></section>
+<section id="registro"><div class="wrap"><p class="eyebrow">Registro</p><h2>Anotá cada sesión</h2><p class="sub">Kilos, repeticiones y RIR de cada serie, apenas la termines. Se guarda solo, sin botón. Al terminar el día, completá duración, dolor lumbar, energía y sueño.</p>
+<div class="rg-status" id="rg-status" role="status" aria-live="polite" data-k="busy"><span>Preparando el registro…</span></div>
+<div class="tabs" role="tablist" aria-label="Qué anotar"><button class="rtab" type="button" role="tab" data-rt="ses" aria-selected="true">Entrenamiento</button><button class="rtab" type="button" role="tab" data-rt="body" aria-selected="false">Cuerpo</button></div>
+<div class="rg-pick" id="rg-pick"><div class="row"><span>Semana</span><button class="rchip sq" type="button" data-w="1" aria-pressed="true">1</button><button class="rchip sq" type="button" data-w="2" aria-pressed="false">2</button><button class="rchip sq" type="button" data-w="3" aria-pressed="false">3</button><button class="rchip sq" type="button" data-w="4" aria-pressed="false">4</button><button class="rchip sq" type="button" data-w="5" aria-pressed="false">5</button><button class="rchip sq" type="button" data-w="6" aria-pressed="false">6</button><button class="rchip sq" type="button" data-w="7" aria-pressed="false">7</button><button class="rchip sq" type="button" data-w="8" aria-pressed="false">8</button></div><div class="row"><span>Día</span><button class="rchip" type="button" data-d="0" aria-pressed="true">Lun</button><button class="rchip" type="button" data-d="1" aria-pressed="false">Mar</button><button class="rchip" type="button" data-d="2" aria-pressed="false">Mié</button><button class="rchip" type="button" data-d="3" aria-pressed="false">Jue</button><button class="rchip" type="button" data-d="4" aria-pressed="false">Vie</button></div></div><p class="rg-prog" id="rg-prog"></p><div id="rg-ses"></div><div id="rg-body" hidden></div>
+<div class="rg-tools"><span class="lab">Llevar a una hoja de cálculo</span><button class="linkbtn" type="button" data-x="series">Series</button><button class="linkbtn" type="button" data-x="ses">Sesiones</button><button class="linkbtn" type="button" data-x="body">Cuerpo</button></div><p class="rg-toast" id="rg-toast" role="status"></p><textarea id="rg-out" hidden readonly aria-label="Texto para copiar"></textarea><p class="small" style="margin-top:.75rem">Gris o vacío = sin dato. Esta página y la planilla de Excel no se sincronizan: usá una sola de las dos para anotar.</p></div></section>
+<section id="ejercicios"><div class="wrap"><p class="eyebrow">Cómo se hace cada ejercicio</p><h2>Guía paso a paso</h2><p class="sub">22 ejercicios, con los elementos que usa cada uno. Las descripciones son de práctica habitual; si algo duele o no te sale, bajá el recorrido y preguntale a un profesional.</p>
+<ul class="safety"><li>Calentá con una serie liviana antes de cada ejercicio.</li><li>Bajá siempre controlando (2–3 s).</li><li>No aguantes la respiración durante el esfuerzo.</li><li>Frená si aparece dolor agudo, dolor que baja por la pierna u hormigueo.</li></ul>
+<div class="bar" role="group" aria-label="Filtrar ejercicios"><button class="chip" aria-pressed="true" data-f="Todos">Todos (22)</button>
+<button class="chip" aria-pressed="false" data-f="Piernas">Piernas (10)</button>
+<button class="chip" aria-pressed="false" data-f="Espalda">Espalda (5)</button>
+<button class="chip" aria-pressed="false" data-f="Core">Core (3)</button>
+<button class="chip" aria-pressed="false" data-f="Brazos y empuje">Brazos y empuje (4)</button>
+<button class="linkbtn" id="toggle-all" type="button">Abrir todos</button></div><div class="cards">
+<details class="card" id="ej-bulgara" data-g="Piernas"><summary><div class="g">Piernas</div><h3>Sentadilla búlgara</h3><div class="m">Cuádriceps y glúteo</div></summary><div class="body">
+<div class="blk"><h4>Elementos</h4><div class="els"><span>2 mancuernas</span><span>Silla firme (si podés, contra la pared para que no se deslice)</span></div></div>
+<div class="blk"><h4>Posición inicial</h4><p>De espaldas a la silla. Apoyá la punta del pie trasero sobre el asiento y da un paso largo adelante con el otro pie. Una mancuerna en cada mano, a los lados.</p></div>
+<div class="blk"><h4>Cómo</h4><ol><li>Bajá flexionando la rodilla de adelante hasta ≈ 90°, en 2–3 s.</li><li>Subí empujando con el pie de adelante.</li><li>Terminá todas las repeticiones de una pierna y recién ahí cambiá. Empezá por la más débil y repetí el mismo número en la otra.</li></ol></div>
+<div class="blk"><h4>Evitá</h4><ul class="minus"><li>Que la rodilla de adelante se hunda hacia adentro.</li><li>Empujar con el pie de atrás: el trabajo es de la pierna de adelante.</li></ul></div>
+<div class="blk"><div class="cue">Torso apenas inclinado hacia adelante: más glúteo. Torso vertical: más cuádriceps.</div></div>
+<div class="blk"><h4>Variantes y progresión</h4><p>Semanas 1–2: zancada estática. Igual, pero con el pie trasero en el piso, sin silla, hasta tener equilibrio.</p></div>
+<div class="days">Se hace: Lunes</div></div></details>
+<details class="card" id="ej-hipthrust" data-g="Piernas"><summary><div class="g">Piernas</div><h3>Hip thrust</h3><div class="m">Glúteo mayor</div></summary><div class="body">
+<div class="blk"><h4>Elementos</h4><div class="els"><span>1 o 2 mancuernas</span><span>Silla firme o borde de la cama</span><span>Silla, escalón o libros firmes (solo para la variante con pies elevados)</span></div></div>
+<div class="blk"><h4>Posición inicial</h4><p>Sentada en el piso con la espalda alta (los omóplatos) apoyada en el borde de la silla o la cama. Rodillas flexionadas y pies apoyados. La mancuerna, horizontal sobre la cadera, sostenida con las manos.</p></div>
+<div class="blk"><h4>Cómo</h4><ol><li>Subí la cadera hasta que el tronco y los muslos queden en línea, con las costillas abajo.</li><li>Pausa de 1 s arriba, apretando los glúteos.</li><li>Bajá controlando.</li></ol></div>
+<div class="blk"><h4>Evitá</h4><ul class="minus"><li>Arquear la zona lumbar al final: terminá con las costillas abajo.</li><li>Que la silla o la cama se deslicen: probá que estén firmes antes de cargar.</li></ul></div>
+<div class="blk"><div class="cue">La pausa arriba es parte del ejercicio.</div></div>
+<div class="blk"><h4>Variantes y progresión</h4><p>A una pierna (miércoles): un pie apoyado y la otra pierna estirada o flexionada en el aire; la cadera no gira. Con pies elevados (viernes): los pies sobre una silla o escalón firme, hasta 35 kg en total sobre la cadera.</p></div>
+<div class="days">Se hace: Lunes · Miércoles · Viernes</div></div></details>
+<details class="card" id="ej-stepup" data-g="Piernas"><summary><div class="g">Piernas</div><h3>Step-up</h3><div class="m">Glúteo y cuádriceps</div></summary><div class="body">
+<div class="blk"><h4>Elementos</h4><div class="els"><span>2 mancuernas</span><span>Escalón o escalera firme</span></div></div>
+<div class="blk"><h4>Posición inicial</h4><p>De frente a un escalón firme, con una mancuerna en cada mano, a los lados.</p></div>
+<div class="blk"><h4>Cómo</h4><ol><li>Apoyá todo el pie arriba del escalón.</li><li>Subí empujando con esa pierna, sin impulsarte con la de abajo.</li><li>Arriba, la rodilla queda a ≈ 90°. Bajá controlando.</li></ol></div>
+<div class="blk"><h4>Evitá</h4><ul class="minus"><li>Impulsarte con la pierna que queda abajo.</li><li>Apoyar solo la punta del pie en el escalón.</li></ul></div>
+<div class="blk"><div class="cue">Todas las repeticiones de una pierna, después la otra.</div></div>
+<div class="days">Se hace: Lunes</div></div></details>
+<details class="card" id="ej-talones" data-g="Piernas"><summary><div class="g">Piernas</div><h3>Elevación de talones</h3><div class="m">Gemelos</div></summary><div class="body">
+<div class="blk"><h4>Elementos</h4><div class="els"><span>Escalón o escalera</span><span>Una pared para agarrarte</span><span>Mancuernas (opcional)</span></div></div>
+<div class="blk"><h4>Posición inicial</h4><p>De pie con la punta de los pies en el borde del escalón y los talones en el aire. Una mano apoyada en la pared para el equilibrio.</p></div>
+<div class="blk"><h4>Cómo</h4><ol><li>Bajá los talones hasta sentir el estiramiento y hacé una pausa de 1 s abajo.</li><li>Subí lo más alto que puedas.</li></ol></div>
+<div class="blk"><h4>Evitá</h4><ul class="minus"><li>Rebotar abajo sin controlar.</li></ul></div>
+<div class="blk"><h4>Variantes y progresión</h4><p>Cuando sea fácil, hacelo a una pierna.</p></div>
+<div class="days">Se hace: Lunes · Viernes</div></div></details>
+<details class="card" id="ej-pmr" data-g="Piernas"><summary><div class="g">Piernas</div><h3>Peso muerto rumano con 2 mancuernas</h3><div class="m">Isquios y glúteo</div></summary><div class="body">
+<div class="blk"><h4>Elementos</h4><div class="els"><span>2 mancuernas</span></div></div>
+<div class="blk"><h4>Posición inicial</h4><p>De pie, pies al ancho de las caderas, una mancuerna en cada mano frente a los muslos. Rodillas apenas flexionadas y fijas.</p></div>
+<div class="blk"><h4>Cómo</h4><ol><li>Llevá la cadera hacia atrás y bajá las mancuernas pegadas a las piernas.</li><li>Bajá hasta sentir que se estira la parte de atrás de los muslos, o hasta donde puedas mantener la columna neutra.</li><li>Subí apretando los glúteos.</li></ol></div>
+<div class="blk"><h4>Evitá</h4><ul class="minus"><li>Redondear la espalda.</li><li>Doblar las rodillas como en una sentadilla: lo que se mueve es la cadera.</li></ul></div>
+<div class="blk"><div class="cue">Si aparece dolor lumbar, acortá el recorrido o dejá el ejercicio de lado ese día.</div></div>
+<div class="blk"><h4>Variantes y progresión</h4><p>Viernes: bajada de 3 s. Cuando llegues al techo de carga, pasá a una pierna con apoyo en la pared.</p></div>
+<div class="days">Se hace: Miércoles · Viernes</div></div></details>
+<details class="card" id="ej-sumo" data-g="Piernas"><summary><div class="g">Piernas</div><h3>Sentadilla sumo con 2 mancuernas</h3><div class="m">Aductores y glúteo</div></summary><div class="body">
+<div class="blk"><h4>Elementos</h4><div class="els"><span>2 mancuernas</span></div></div>
+<div class="blk"><h4>Posición inicial</h4><p>Pies bien separados (más que los hombros) con las puntas hacia afuera. Una mancuerna en cada mano, colgando entre las piernas con los brazos estirados.</p></div>
+<div class="blk"><h4>Cómo</h4><ol><li>Bajá flexionando las rodillas en la dirección de los pies, en 3 s.</li><li>Subí.</li></ol></div>
+<div class="blk"><h4>Evitá</h4><ul class="minus"><li>Que las rodillas se junten.</li><li>Sostener una mancuerna por el disco con las dos manos.</li></ul></div>
+<div class="blk"><h4>Variantes y progresión</h4><p>Si una sola mancuerna entra cómoda entre las dos manos, tomada por el mango en vertical, también sirve.</p></div>
+<div class="days">Se hace: Miércoles</div></div></details>
+<details class="card" id="ej-curlisq" data-g="Piernas"><summary><div class="g">Piernas</div><h3>Curl de isquios con toalla</h3><div class="m">Isquios</div></summary><div class="body">
+<div class="blk"><h4>Elementos</h4><div class="els"><span>Toalla o medias</span><span>Piso liso</span></div></div>
+<div class="blk"><h4>Posición inicial</h4><p>Boca arriba, rodillas flexionadas, talones sobre una toalla (o con medias en un piso liso).</p></div>
+<div class="blk"><h4>Cómo</h4><ol><li>Subí la cadera (puente).</li><li>Con la cadera arriba, deslizá los talones estirando las piernas hasta donde puedas controlar.</li><li>Volvé flexionando las rodillas y llevando los talones hacia los glúteos.</li></ol></div>
+<div class="blk"><h4>Evitá</h4><ul class="minus"><li>Dejar caer la cadera mientras deslizás.</li></ul></div>
+<div class="blk"><div class="cue">Es difícil: empezá con un recorrido corto.</div></div>
+<div class="days">Se hace: Miércoles</div></div></details>
+<details class="card" id="ej-abduccion" data-g="Piernas"><summary><div class="g">Piernas</div><h3>Abducción de cadera acostada</h3><div class="m">Glúteo medio</div></summary><div class="body">
+<div class="blk"><h4>Elementos</h4><div class="els"><span>Piso o cama</span><span>Disco de 2,5 kg sobre la pierna (si hace falta)</span></div></div>
+<div class="blk"><h4>Posición inicial</h4><p>De costado, piernas estiradas y alineadas con el tronco.</p></div>
+<div class="blk"><h4>Cómo</h4><ol><li>Elevá la pierna de arriba unos 30–45°.</li><li>Bajá lento.</li></ol></div>
+<div class="blk"><h4>Evitá</h4><ul class="minus"><li>Girar la pelvis o la punta del pie hacia arriba.</li></ul></div>
+<div class="blk"><div class="cue">La pelvis queda quieta.</div></div>
+<div class="days">Se hace: Miércoles</div></div></details>
+<details class="card" id="ej-zrev" data-g="Piernas"><summary><div class="g">Piernas</div><h3>Zancada reversa</h3><div class="m">Cuádriceps y glúteo</div></summary><div class="body">
+<div class="blk"><h4>Elementos</h4><div class="els"><span>2 mancuernas</span><span>Espacio libre detrás de vos</span></div></div>
+<div class="blk"><h4>Posición inicial</h4><p>De pie, una mancuerna en cada mano, a los lados.</p></div>
+<div class="blk"><h4>Cómo</h4><ol><li>Da un paso largo hacia atrás.</li><li>Bajá hasta que las dos rodillas lleguen a ≈ 90°.</li><li>Volvé empujando con el pie de adelante.</li></ol></div>
+<div class="blk"><h4>Evitá</h4><ul class="minus"><li>Un paso corto: la rodilla de adelante se adelanta de más.</li></ul></div>
+<div class="blk"><div class="cue">Empezá por la pierna más débil y repetí el mismo número en la otra.</div></div>
+<div class="days">Se hace: Viernes</div></div></details>
+<details class="card" id="ej-zlat" data-g="Piernas"><summary><div class="g">Piernas</div><h3>Zancada lateral</h3><div class="m">Aductores y glúteo</div></summary><div class="body">
+<div class="blk"><h4>Elementos</h4><div class="els"><span>2 mancuernas</span></div></div>
+<div class="blk"><h4>Posición inicial</h4><p>De pie, con las mancuernas a los lados.</p></div>
+<div class="blk"><h4>Cómo</h4><ol><li>Da un paso largo a un costado.</li><li>Llevá la cadera hacia atrás y flexioná solo esa rodilla; la otra pierna queda estirada.</li><li>Empujá para volver.</li></ol></div>
+<div class="blk"><div class="cue">La pierna de apoyo con la cadera atrás.</div></div>
+<div class="days">Se hace: Viernes</div></div></details>
+<details class="card" id="ej-remo1" data-g="Espalda"><summary><div class="g">Espalda</div><h3>Remo a una mano</h3><div class="m">Dorsal</div></summary><div class="body">
+<div class="blk"><h4>Elementos</h4><div class="els"><span>1 mancuerna</span><span>Cama o silla firme para apoyar una rodilla y una mano</span></div></div>
+<div class="blk"><h4>Posición inicial</h4><p>Una rodilla y una mano apoyadas en la cama o la silla. Espalda recta y paralela al piso. La mancuerna en la otra mano, colgando.</p></div>
+<div class="blk"><h4>Cómo</h4><ol><li>Llevá el codo hacia la cadera (no hacia el techo).</li><li>Pausa corta arriba.</li><li>Bajá lento.</li></ol></div>
+<div class="blk"><h4>Evitá</h4><ul class="minus"><li>Girar el tronco para subir la mancuerna.</li></ul></div>
+<div class="blk"><div class="cue">Mismas repeticiones en ambos lados; empezá por el lado más débil.</div></div>
+<div class="days">Se hace: Martes</div></div></details>
+<details class="card" id="ej-remoinc" data-g="Espalda"><summary><div class="g">Espalda</div><h3>Remo inclinado con 2 mancuernas</h3><div class="m">Espalda</div></summary><div class="body">
+<div class="blk"><h4>Elementos</h4><div class="els"><span>2 mancuernas</span><span>Cama o silla (opcional, para apoyar el pecho)</span></div></div>
+<div class="blk"><h4>Posición inicial</h4><p>De pie, con la cadera hacia atrás y el torso inclinado ≈ 45°, la columna neutra. Una mancuerna en cada mano.</p></div>
+<div class="blk"><h4>Cómo</h4><ol><li>Llevá los codos hacia atrás y abajo, juntando los omóplatos.</li><li>Bajá lento.</li></ol></div>
+<div class="blk"><h4>Evitá</h4><ul class="minus"><li>Redondear la espalda.</li></ul></div>
+<div class="blk"><div class="cue">Si molesta la zona lumbar, apoyá el pecho en una cama o silla inclinada.</div></div>
+<div class="blk"><h4>Variantes y progresión</h4><p>Jueves (con pausa): mantené 2 s arriba apretando los omóplatos.</p></div>
+<div class="days">Se hace: Martes · Jueves</div></div></details>
+<details class="card" id="ej-superman" data-g="Espalda"><summary><div class="g">Espalda</div><h3>Superman</h3><div class="m">Erectores (espalda baja)</div></summary><div class="body">
+<div class="blk"><h4>Elementos</h4><div class="els"><span>Piso (con toalla o colchoneta)</span></div></div>
+<div class="blk"><h4>Posición inicial</h4><p>Boca abajo, brazos estirados hacia adelante, mirando al piso.</p></div>
+<div class="blk"><h4>Cómo</h4><ol><li>Elevá a la vez brazos, pecho y piernas unos centímetros.</li><li>Pausa de 2 s arriba.</li><li>Bajá.</li></ol></div>
+<div class="blk"><h4>Evitá</h4><ul class="minus"><li>Forzar el cuello: la mirada va al piso.</li></ul></div>
+<div class="blk"><div class="cue">Si da dolor lumbar, frená.</div></div>
+<div class="blk"><h4>Variantes y progresión</h4><p>Versión alternada: elevá solo un brazo y la pierna contraria (brazo derecho con pierna izquierda).</p></div>
+<div class="days">Se hace: Martes</div></div></details>
+<details class="card" id="ej-aperturas" data-g="Espalda"><summary><div class="g">Espalda</div><h3>Aperturas posteriores inclinada</h3><div class="m">Deltoide posterior y espalda alta</div></summary><div class="body">
+<div class="blk"><h4>Elementos</h4><div class="els"><span>2 mancuernas livianas (2,5–5 kg)</span></div></div>
+<div class="blk"><h4>Posición inicial</h4><p>De pie con la cadera hacia atrás y el torso casi paralelo al piso, la columna neutra. Una mancuerna liviana en cada mano, colgando.</p></div>
+<div class="blk"><h4>Cómo</h4><ol><li>Con los codos levemente flexionados, abrí los brazos a los lados hasta la altura del torso, apretando los omóplatos.</li><li>Bajá lento.</li></ol></div>
+<div class="blk"><h4>Evitá</h4><ul class="minus"><li>Balancear el tronco para subir.</li></ul></div>
+<div class="days">Se hace: Martes</div></div></details>
+<details class="card" id="ej-ytw" data-g="Espalda"><summary><div class="g">Espalda</div><h3>Y-T-W boca abajo</h3><div class="m">Trapecio inferior y medio</div></summary><div class="body">
+<div class="blk"><h4>Elementos</h4><div class="els"><span>Cama o piso</span><span>Toalla para apoyar la frente</span><span>Mancuernas de 1–2,5 kg (opcional)</span></div></div>
+<div class="blk"><h4>Posición inicial</h4><p>Boca abajo, la frente apoyada en una toalla y el cuello neutro (mirando al piso).</p></div>
+<div class="blk"><h4>Los tres movimientos</h4><div class="ytw"><div><b>Y</b><p>Brazos estirados adelante y arriba, formando una Y, con los pulgares hacia el techo. Elevá los brazos unos centímetros del piso o la cama y bajá.</p></div><div><b>T</b><p>Brazos abiertos a los costados, formando una T, con los pulgares hacia el techo. Elevá llevando los omóplatos hacia la columna y abajo.</p></div><div><b>W</b><p>Codos doblados y pegados al cuerpo, formando una W. Elevá llevando los codos hacia atrás y los omóplatos juntos.</p></div></div></div>
+<div class="blk"><h4>Evitá</h4><ul class="minus"><li>Levantar la zona lumbar: apretá suave los glúteos y mantené las costillas abajo.</li><li>Subir los hombros hacia las orejas.</li><li>Balancearte.</li></ul></div>
+<div class="blk"><div class="cue">Una repetición = Y, T y W seguidas. Pausa de 1 s arriba. Una serie son 8–12 repeticiones.</div></div>
+<div class="blk"><h4>Variantes y progresión</h4><p>Sin peso al principio. Si no te sale con técnica limpia, hacé solo la T y la W.</p></div>
+<div class="days">Se hace: Jueves</div></div></details>
+<details class="card" id="ej-plancha" data-g="Core"><summary><div class="g">Core</div><h3>Plancha lateral</h3><div class="m">Core lateral</div></summary><div class="body">
+<div class="blk"><h4>Elementos</h4><div class="els"><span>Piso (con colchoneta o toalla)</span></div></div>
+<div class="blk"><h4>Posición inicial</h4><p>De costado, apoyada en el antebrazo (codo justo bajo el hombro) y en el borde externo del pie.</p></div>
+<div class="blk"><h4>Cómo</h4><ol><li>Levantá la cadera hasta que el cuerpo forme una línea recta.</li><li>Mantené 20–40 s.</li><li>Igual tiempo en ambos lados.</li></ol></div>
+<div class="blk"><h4>Evitá</h4><ul class="minus"><li>Que la cadera se caiga hacia el piso.</li></ul></div>
+<div class="blk"><h4>Variantes y progresión</h4><p>Versión más fácil: apoyá la rodilla de abajo.</p></div>
+<div class="days">Se hace: Martes</div></div></details>
+<details class="card" id="ej-deadbug" data-g="Core"><summary><div class="g">Core</div><h3>Dead bug</h3><div class="m">Core</div></summary><div class="body">
+<div class="blk"><h4>Elementos</h4><div class="els"><span>Piso</span></div></div>
+<div class="blk"><h4>Posición inicial</h4><p>Boca arriba, la zona lumbar apoyada en el piso, brazos estirados hacia el techo, caderas y rodillas a 90° (piernas «de mesa»).</p></div>
+<div class="blk"><h4>Cómo</h4><ol><li>Bajá a la vez un brazo y la pierna contraria, sin despegar la zona lumbar del piso.</li><li>Volvé.</li><li>Alterná.</li></ol></div>
+<div class="blk"><h4>Evitá</h4><ul class="minus"><li>Que la zona lumbar se despegue del piso.</li></ul></div>
+<div class="blk"><h4>Variantes y progresión</h4><p>Si la zona lumbar se despega, achicá el recorrido.</p></div>
+<div class="days">Se hace: Martes</div></div></details>
+<details class="card" id="ej-crunch" data-g="Core"><summary><div class="g">Core</div><h3>Crunch en el piso</h3><div class="m">Abdomen</div></summary><div class="body">
+<div class="blk"><h4>Elementos</h4><div class="els"><span>Piso</span><span>Disco o mancuerna de 5 kg (opcional)</span></div></div>
+<div class="blk"><h4>Posición inicial</h4><p>Boca arriba, rodillas flexionadas, manos cruzadas sobre el pecho.</p></div>
+<div class="blk"><h4>Cómo</h4><ol><li>Enrollá la parte alta del tronco hacia las rodillas, con la zona lumbar apoyada.</li><li>Recorrido corto.</li><li>Bajá lento.</li></ol></div>
+<div class="blk"><h4>Variantes y progresión</h4><p>Cuando 15 repeticiones sean fáciles, sumá 5 kg sobre el pecho.</p></div>
+<div class="days">Se hace: Jueves</div></div></details>
+<details class="card" id="ej-pressh" data-g="Brazos y empuje"><summary><div class="g">Brazos y empuje</div><h3>Press de hombros sentada</h3><div class="m">Hombros</div></summary><div class="body">
+<div class="blk"><h4>Elementos</h4><div class="els"><span>2 mancuernas livianas</span><span>Silla con respaldo</span></div></div>
+<div class="blk"><h4>Posición inicial</h4><p>Sentada en la silla con la espalda apoyada. Una mancuerna en cada mano, a la altura de los hombros.</p></div>
+<div class="blk"><h4>Cómo</h4><ol><li>Empujá hacia arriba.</li><li>Bajá lento.</li></ol></div>
+<div class="blk"><h4>Evitá</h4><ul class="minus"><li>Arquear la espalda baja.</li></ul></div>
+<div class="blk"><div class="cue">Usá una carga liviana.</div></div>
+<div class="days">Se hace: Jueves</div></div></details>
+<details class="card" id="ej-flex" data-g="Brazos y empuje"><summary><div class="g">Brazos y empuje</div><h3>Flexiones (silla o rodillas)</h3><div class="m">Pecho y tríceps</div></summary><div class="body">
+<div class="blk"><h4>Elementos</h4><div class="els"><span>Silla firme (manos en el respaldo o el asiento)</span><span>Piso (rodillas apoyadas)</span></div></div>
+<div class="blk"><h4>Posición inicial</h4><p>Manos apoyadas en la silla, o en el piso con las rodillas apoyadas. El cuerpo en línea desde la cabeza hasta las rodillas o los pies.</p></div>
+<div class="blk"><h4>Cómo</h4><ol><li>Bajá el pecho hasta casi tocar.</li><li>Subí.</li></ol></div>
+<div class="blk"><h4>Evitá</h4><ul class="minus"><li>Dejar caer la cadera o levantarla.</li></ul></div>
+<div class="blk"><div class="cue">Parás cuando te quedan 1–2 repeticiones antes de que se rompa la técnica.</div></div>
+<div class="blk"><h4>Variantes y progresión</h4><p>Progresión: manos en la silla, después rodillas en el piso, después piso completo. Dentro de cada nivel, más repeticiones (hasta ≈ 20), bajada de 3 s y pausa de 1 s abajo.</p></div>
+<div class="days">Se hace: Jueves</div></div></details>
+<details class="card" id="ej-flexc" data-g="Brazos y empuje"><summary><div class="g">Brazos y empuje</div><h3>Flexiones cerradas</h3><div class="m">Tríceps</div></summary><div class="body">
+<div class="blk"><h4>Elementos</h4><div class="els"><span>Silla firme</span><span>Piso (rodillas apoyadas)</span></div></div>
+<div class="blk"><h4>Posición inicial</h4><p>Igual que las flexiones, pero con las manos juntas bajo el pecho (formando un triángulo, o a unos 10–15 cm entre sí).</p></div>
+<div class="blk"><h4>Cómo</h4><ol><li>Bajá con los codos pegados al cuerpo.</li><li>Subí.</li></ol></div>
+<div class="blk"><h4>Evitá</h4><ul class="minus"><li>Abrir los codos hacia los costados.</li></ul></div>
+<div class="blk"><div class="cue">Cargan más el tríceps que las flexiones comunes.</div></div>
+<div class="blk"><h4>Variantes y progresión</h4><p>Los mismos niveles que las flexiones: silla, rodillas, piso.</p></div>
+<div class="days">Se hace: Jueves</div></div></details>
+<details class="card" id="ej-curlb" data-g="Brazos y empuje"><summary><div class="g">Brazos y empuje</div><h3>Curl de bíceps alternado</h3><div class="m">Bíceps</div></summary><div class="body">
+<div class="blk"><h4>Elementos</h4><div class="els"><span>2 mancuernas</span></div></div>
+<div class="blk"><h4>Posición inicial</h4><p>De pie, una mancuerna en cada mano.</p></div>
+<div class="blk"><h4>Cómo</h4><ol><li>Flexioná un codo llevando la mancuerna hacia el hombro.</li><li>Bajá lento y alterná con el otro brazo.</li></ol></div>
+<div class="blk"><h4>Evitá</h4><ul class="minus"><li>Balancear el torso.</li></ul></div>
+<div class="days">Se hace: Jueves</div></div></details>
+</div></div></section>
+<section id="reglas"><div class="wrap"><p class="eyebrow">Reglas</p><h2>Cómo llevar las semanas</h2><div class="rules">
+<div class="rule"><h3>Semanas 1 y 2</h3><div><p>Adaptación: 2 series por ejercicio, RIR 3 y bajada de 2–3 s. El objetivo es aprender la técnica y llegar a la semana 3 sin agujetas fuertes ni molestias en la zona lumbar.</p></div></div>
+<div class="rule"><h3>Qué tan cerca del límite</h3><div><div class="rir"><span><b>0</b>no podía hacer ninguna más</span><span><b>1</b>podía 1 más</span><span><b>2</b>podía 2 más</span><span><b>3</b>podía 3 más</span></div><p>Semanas 3 a 8: RIR 1–2 en piernas y espalda. RIR 0–1 solo en la última serie de los ejercicios aislados (talones, curl, aperturas, flexiones cerradas). Con cargas livianas el crecimiento depende de acercarse al límite: la serie tiene que sentirse realmente difícil.</p></div></div>
+<div class="rule"><h3>Descanso</h3><div><p>60–90 s entre series. En los ejercicios a una pierna se alterna una pierna y la otra, y el descanso se cubre solo.</p></div></div>
+<div class="rule"><h3>Cuándo subir el peso</h3><div><p>Cuando todas las series del ejercicio llegan al número más alto del rango con RIR 1 o más, la semana siguiente subí 2,5 kg por mancuerna.</p><p>Cada mancuerna llega a unos 17,5 kg. Cuando ya no puedas subir peso, seguí en este orden: más repeticiones (hasta 20–25 en piernas), bajada de 3 s, pausa de 1–2 s en el punto más estirado, ejercicio a una pierna, y recién después sumar series (1 por semana, máximo 2 extra).</p></div></div>
+<div class="rule"><h3>Los dos lados</h3><div><p>En los ejercicios de un lado, empezá por el lado más débil y hacé el mismo número de repeticiones del otro lado. No compenses con series extra de un lado hasta que un kinesiólogo lo indique.</p></div></div>
+<div class="rule"><h3>Semana de descarga</h3><div><p>Solo si hay señales: no llegar al rango en la primera serie de dos ejercicios principales en dos sesiones seguidas, dolor de 4/10 o más durante más de dos sesiones, o seis semanas seguidas sin descarga. Esa semana: 60 % de la carga y la mitad de las series.</p></div></div>
+<div class="rule"><h3>Qué anotar</h3><div><p>Kilos, repeticiones y RIR de cada serie, duración de la sesión, dolor de 0 a 10 y peso en ayunas una vez por semana. Cada 4 semanas, medidas de muslo, cadera y cintura, y una foto con la misma luz. Todo eso se anota en la sección Registro de esta página (o en la planilla de Excel, pero en una sola de las dos).</p></div></div>
+</div>
+<div class="care"><h3>Escoliosis y zona lumbar</h3><p class="l">Lo que no se puede prometer</p><p>No hay una fuente verificada de que un programa de ejercicio corrija una escoliosis en una adulta. Esta rutina busca más fuerza, más control, trabajo parejo de los dos lados y mejor tolerancia de la zona lumbar. Corregir la curva no es una promesa que se pueda hacer.</p><p class="l">Qué hace la rutina</p><ul><li>Espalda simétrica: remos, aperturas posteriores, Y-T-W y superman.</li><li>Core que estabiliza: plancha lateral y dead bug.</li><li>Casi todo el peso va en las manos, a los lados o sobre la cadera, sin barra sobre los hombros.</li></ul><p class="l">Cuándo frenar y consultar</p><ul><li>Dolor lumbar de 4/10 o más que no cede en 24–48 horas.</li><li>Dolor que baja por la pierna, hormigueo, pérdida de fuerza o dolor de noche.</li><li>Dolor que aumenta de una semana a la siguiente.</li></ul><p>El peso muerto rumano y el superman son los que más cargan la zona lumbar: si molestan, acortá el recorrido o dejá el ejercicio de lado ese día. Conviene que un médico o kinesiólogo con experiencia en escoliosis revise la radiografía (hoy no se conoce el grado) y le indique 2 o 3 ejercicios específicos. Eso complementa esta rutina.</p></div>
+</div></section>
+<section id="fuentes"><div class="wrap"><p class="eyebrow">Fuentes y límites</p><h2>En qué se apoya</h2><p class="sub">Estado de la revisión: parcial. Salvo Pelland 2026, que se leyó completo, los trabajos se leyeron solo en el resumen de PubMed. Para la sentadilla búlgara, el step-up, el curl de isquios con toalla, Y-T-W, superman y plancha lateral no se encontraron ensayos de hipertrofia: se eligieron por activación muscular, por lo que permiten las mancuernas y por su función.</p><ol class="refs">
+<li>Pelland et al. 2026, Sports Medicine: volumen semanal y crecimiento muscular (rendimientos decrecientes). <a href="https://doi.org/10.1007/s40279-025-02344-w" target="_blank" rel="noopener">doi.org/10.1007/s40279-025-02344-w</a> <span>· PMID 41343037 · leído completo</span></li>
+<li>Molinari et al. 2024, J Strength Cond Res: entrenamiento de fuerza en mujeres, volumen y frecuencia. <a href="https://doi.org/10.1519/JSC.0000000000004666" target="_blank" rel="noopener">doi.org/10.1519/JSC.0000000000004666</a> <span>· solo resumen</span></li>
+<li>Krause Neto et al. 2025, Frontiers in Physiology: ejercicios y crecimiento del glúteo mayor. <a href="https://doi.org/10.3389/fphys.2025.1542334" target="_blank" rel="noopener">doi.org/10.3389/fphys.2025.1542334</a> <span>· solo resumen</span></li>
+<li>Plotkin et al. 2023, Frontiers in Physiology: hip thrust frente a sentadilla en personas no entrenadas. <a href="https://doi.org/10.3389/fphys.2023.1279170" target="_blank" rel="noopener">doi.org/10.3389/fphys.2023.1279170</a> <span>· solo resumen · tiene un aviso de corrección que no se revisó</span></li>
+<li>Yu y Ueda 2025, Nutrients: flexiones en rodillas y grosor del tríceps en mujeres. <a href="https://doi.org/10.3390/nu17061022" target="_blank" rel="noopener">doi.org/10.3390/nu17061022</a> <span>· solo resumen · sin grupo sin entrenar</span></li>
+<li>Pilates y alineación postural, Musculoskeletal Care 2024: certeza muy baja a baja en adultos. <a href="https://doi.org/10.1002/msc.70009" target="_blank" rel="noopener">doi.org/10.1002/msc.70009</a> <span>· solo resumen</span></li>
+<li>Ejercicios tipo Schroth, Children 2023: metodología débil, casi todo en adolescentes. <a href="https://doi.org/10.3390/children10060954" target="_blank" rel="noopener">doi.org/10.3390/children10060954</a> <span>· solo resumen</span></li>
+</ol><p class="small" style="margin-top:1rem">Los identificadores se verificaron en PubMed el 17 y 18 de noviembre de 2026. La búsqueda y la lectura las hizo una sola herramienta, sin evaluación independiente. La información de base llega hasta junio de 2026: pueden existir trabajos posteriores que no se vieron.</p></div></section>
+</main>
+<footer><div class="wrap"><p>Propuesta de programación de ejercicio basada en la versión 2 del 18/11/2026. No reemplaza una evaluación médica ni kinésica, y no se revisó a la persona.</p><p>Los pesos iniciales, las series por músculo y los umbrales de descarga son estimaciones propuestas, no resultados de un ensayo. Ajustar según cómo responda.</p></div></footer>
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.tab')), panels=[].slice.call(document.querySelectorAll('.panel'));
+  function show(i){tabs.forEach(function(t,k){t.setAttribute('aria-selected',k===i?'true':'false');});panels.forEach(function(p,k){p.hidden=k!==i;});}
+  tabs.forEach(function(t){t.addEventListener('click',function(){show(+t.getAttribute('data-i'));});
+    t.addEventListener('keydown',function(e){var i=+t.getAttribute('data-i'),n=-1;if(e.key==='ArrowRight')n=(i+1)%tabs.length;if(e.key==='ArrowLeft')n=(i+tabs.length-1)%tabs.length;if(n>=0){e.preventDefault();show(n);tabs[n].focus();}});});
+  var wd=new Date().getDay(); if(wd>=1&&wd<=5){show(wd-1);}
+  var chips=[].slice.call(document.querySelectorAll('.chip')), cards=[].slice.call(document.querySelectorAll('.card')), tog=document.getElementById('toggle-all');
+  function filt(f){chips.forEach(function(c){c.setAttribute('aria-pressed',c.getAttribute('data-f')===f?'true':'false');});
+    cards.forEach(function(c){c.hidden=!(f==='Todos'||c.getAttribute('data-g')===f);});}
+  chips.forEach(function(c){c.addEventListener('click',function(){filt(c.getAttribute('data-f'));});});
+  var allOpen=false;
+  tog.addEventListener('click',function(){allOpen=!allOpen;cards.forEach(function(c){if(!c.hidden)c.open=allOpen;});tog.textContent=allOpen?'Cerrar todos':'Abrir todos';});
+  function goTo(t){var y=t.getBoundingClientRect().top+(window.pageYOffset||document.documentElement.scrollTop||0)-64;window.scrollTo({top:Math.max(0,y),behavior:'smooth'});}
+  /* Los links internos (#...) se resuelven acá: dentro del visor, la navegación nativa por ancla puede sacar a la página de su marco. */
+  document.addEventListener('click',function(e){
+    var a=e.target&&e.target.closest?e.target.closest('a[href^="#"]'):null;if(!a)return;
+    var id=(a.getAttribute('href')||'').slice(1);
+    e.preventDefault();
+    if(!id)return;
+    try{id=decodeURIComponent(id);}catch(x){}
+    var t=document.getElementById(id);if(!t)return;
+    if(id.indexOf('ej-')===0){filt('Todos');t.open=true;}
+    goTo(t);},true);
+})();
+</script>
+<script>(function(){
+'use strict';
+var PLAN=[{"k": "Lunes", "t": "Piernas A", "ex": [{"n": "Sentadilla búlgara", "g": "bulgara", "sets": 4, "rmin": 10, "rmax": 15, "per": "por pierna", "rir": "1–2", "rirm": 1, "kg": "por mancuerna", "kind": "peso", "u": "reps", "note": "Semanas 1–2: zancada estática (pie trasero en el piso)"}, {"n": "Hip thrust", "g": "hipthrust", "sets": 4, "rmin": 10, "rmax": 15, "per": "", "rir": "1–2", "rirm": 1, "kg": "total sobre la cadera", "kind": "peso", "u": "reps", "note": "Espalda alta en la silla o la cama; pausa de 1 s arriba"}, {"n": "Step-up", "g": "stepup", "sets": 3, "rmin": 10, "rmax": 12, "per": "por pierna", "rir": "1–2", "rirm": 1, "kg": "por mancuerna", "kind": "peso", "u": "reps", "note": "Rodilla a ≈ 90° arriba"}, {"n": "Elevación de talones", "g": "talones", "sets": 3, "rmin": 12, "rmax": 20, "per": "", "rir": "0–1", "rirm": 1, "kg": "extra (0 = sin peso)", "kind": "peso", "u": "reps", "note": "Pausa de 1 s abajo; a una pierna cuando sea fácil"}]}, {"k": "Martes", "t": "Torso A", "ex": [{"n": "Remo a una mano", "g": "remo1", "sets": 4, "rmin": 10, "rmax": 15, "per": "por lado", "rir": "1–2", "rirm": 1, "kg": "la mancuerna", "kind": "peso", "u": "reps", "note": "Mismas repeticiones en ambos lados; empezá por el lado débil"}, {"n": "Remo inclinado con 2 mancuernas", "g": "remoinc", "sets": 4, "rmin": 10, "rmax": 15, "per": "", "rir": "1–2", "rirm": 1, "kg": "por mancuerna", "kind": "peso", "u": "reps", "note": "Si molesta la zona lumbar, volvé al remo a una mano"}, {"n": "Superman", "g": "superman", "sets": 3, "rmin": 10, "rmax": 15, "per": "", "rir": "1–2", "rirm": 1, "kg": "sin peso (0)", "kind": "corporal", "u": "reps", "note": "Pausa de 2 s arriba; frená si duele la zona lumbar"}, {"n": "Aperturas posteriores inclinada", "g": "aperturas", "sets": 3, "rmin": 12, "rmax": 20, "per": "", "rir": "0–1", "rirm": 1, "kg": "por mancuerna (2,5–5 kg)", "kind": "peso", "u": "reps", "note": "Codos levemente flexionados; sin balanceo"}, {"n": "Plancha lateral", "g": "plancha", "sets": 3, "rmin": 20, "rmax": 40, "per": "por lado", "rir": "", "rirm": null, "kg": "sin peso (0)", "kind": "tiempo", "u": "s", "note": "Mismo tiempo en ambos lados"}, {"n": "Dead bug", "g": "deadbug", "sets": 3, "rmin": 8, "rmax": 10, "per": "por lado", "rir": "1–2", "rirm": 1, "kg": "sin peso (0)", "kind": "corporal", "u": "reps", "note": "Zona lumbar apoyada en el piso"}]}, {"k": "Miércoles", "t": "Piernas B", "ex": [{"n": "Peso muerto rumano con 2 mancuernas", "g": "pmr", "sets": 4, "rmin": 10, "rmax": 15, "per": "", "rir": "1–2", "rirm": 1, "kg": "por mancuerna", "kind": "peso", "u": "reps", "note": "Columna neutra; bajá hasta donde la mantenga"}, {"n": "Hip thrust a una pierna", "g": "hipthrust", "sets": 3, "rmin": 8, "rmax": 12, "per": "por pierna", "rir": "1–2", "rirm": 1, "kg": "la mancuerna en la cadera", "kind": "peso", "u": "reps", "note": "Un pie apoyado; la cadera no gira"}, {"n": "Sentadilla sumo con 2 mancuernas", "g": "sumo", "sets": 3, "rmin": 12, "rmax": 20, "per": "", "rir": "1–2", "rirm": 1, "kg": "por mancuerna", "kind": "peso", "u": "reps", "note": "Mancuernas colgando; bajada de 3 s"}, {"n": "Curl de isquios con toalla", "g": "curlisq", "sets": 3, "rmin": 8, "rmax": 15, "per": "", "rir": "1–2", "rirm": 1, "kg": "sin peso (0)", "kind": "corporal", "u": "reps", "note": "Recorrido corto al inicio"}, {"n": "Abducción de cadera acostada", "g": "abduccion", "sets": 2, "rmin": 15, "rmax": 25, "per": "por lado", "rir": "0–1", "rirm": 1, "kg": "disco de 2,5 kg (0 = sin peso)", "kind": "peso", "u": "reps", "note": "Pelvis estable, sin rotar"}]}, {"k": "Jueves", "t": "Torso B", "ex": [{"n": "Remo con 2 mancuernas, pausa de 2 s", "g": "remoinc", "sets": 3, "rmin": 10, "rmax": 12, "per": "", "rir": "1–2", "rirm": 1, "kg": "por mancuerna", "kind": "peso", "u": "reps", "note": "Apretá los omóplatos en la pausa"}, {"n": "Y-T-W boca abajo", "g": "ytw", "sets": 3, "rmin": 8, "rmax": 12, "per": "", "rir": "1–2", "rirm": 1, "kg": "sin peso (0–2,5 kg)", "kind": "corporal", "u": "reps", "note": "Sin peso al inicio; una repetición = Y + T + W"}, {"n": "Press de hombros sentada", "g": "pressh", "sets": 2, "rmin": 8, "rmax": 12, "per": "", "rir": "1–2", "rirm": 1, "kg": "por mancuerna", "kind": "peso", "u": "reps", "note": "Espalda apoyada, sin arquear"}, {"n": "Flexiones (silla o rodillas)", "g": "flex", "sets": 2, "rmin": 8, "rmax": 15, "per": "", "rir": "1–2", "rirm": 1, "kg": "sin peso (0)", "kind": "corporal", "u": "reps", "note": "Cuerpo en línea"}, {"n": "Curl de bíceps alternado", "g": "curlb", "sets": 3, "rmin": 10, "rmax": 15, "per": "", "rir": "0–1", "rirm": 1, "kg": "por mancuerna", "kind": "peso", "u": "reps", "note": "Sin balanceo"}, {"n": "Flexiones cerradas (silla o rodillas)", "g": "flexc", "sets": 3, "rmin": 8, "rmax": 15, "per": "", "rir": "0–1", "rirm": 1, "kg": "sin peso (0)", "kind": "corporal", "u": "reps", "note": "Manos juntas bajo el pecho"}, {"n": "Crunch en el piso", "g": "crunch", "sets": 3, "rmin": 12, "rmax": 20, "per": "", "rir": "1", "rirm": 1, "kg": "sin peso (0) o 5 kg en el pecho", "kind": "corporal", "u": "reps", "note": "Movimiento corto y controlado"}]}, {"k": "Viernes", "t": "Piernas C", "ex": [{"n": "Zancada reversa", "g": "zrev", "sets": 4, "rmin": 10, "rmax": 12, "per": "por pierna", "rir": "1–2", "rirm": 1, "kg": "por mancuerna", "kind": "peso", "u": "reps", "note": "Paso largo hacia atrás"}, {"n": "Peso muerto rumano, bajada de 3 s", "g": "pmr", "sets": 3, "rmin": 10, "rmax": 15, "per": "", "rir": "1–2", "rirm": 1, "kg": "por mancuerna", "kind": "peso", "u": "reps", "note": "Cuando llegue al techo de carga: a una pierna con apoyo en la pared"}, {"n": "Hip thrust con pies elevados", "g": "hipthrust", "sets": 3, "rmin": 12, "rmax": 20, "per": "", "rir": "1–2", "rirm": 1, "kg": "total sobre la cadera (hasta 35 kg)", "kind": "peso", "u": "reps", "note": "Pies sobre silla, escalón o libros firmes"}, {"n": "Zancada lateral", "g": "zlat", "sets": 3, "rmin": 8, "rmax": 12, "per": "por lado", "rir": "1–2", "rirm": 1, "kg": "por mancuerna", "kind": "peso", "u": "reps", "note": "Pierna de apoyo con la cadera atrás"}, {"n": "Elevación de talones", "g": "talones", "sets": 3, "rmin": 15, "rmax": 25, "per": "", "rir": "0–1", "rirm": 1, "kg": "extra (0 = sin peso)", "kind": "peso", "u": "reps", "note": "A una pierna cuando sea fácil"}]}];
+var root=document.getElementById('registro');
+if(!root||!PLAN)return;
+var NAMES=['Lunes','Martes','Miércoles','Jueves','Viernes'];
+var UP={peso:'↑ Subí 2,5 kg por mancuerna la próxima semana',corporal:'↑ Más repeticiones o un nivel más difícil',tiempo:'↑ Más segundos'};
+var SPEC={k:[0,60,0],r:[0,300,1],i:[0,5,1],dur:[0,240,1],dolor:[0,10,1],ener:[1,5,1],sue:[0,14,0],peso:[20,200,0],muslo:[10,200,0],cadera:[10,200,0],cintura:[10,200,0]};
+var LS='rc.v1',LSUI='rc.ui';
+var DATA={sesiones:{},cuerpo:{}};
+var UI={w:1,d:0,tab:'ses'};
+var lsOK=true,hasUI=false;
+var CL={db:null,state:'pending'};
+var DL=null;
+var WEB=true;
+var timers={},busy={},dirty={},pend={},retried={};
+var nodes=[];
+
+function $(s,r){return (r||root).querySelector(s);}
+function $$(s,r){return [].slice.call((r||root).querySelectorAll(s));}
+function el(tag,cls,txt){var e=document.createElement(tag);if(cls)e.className=cls;if(txt!==undefined&&txt!==null)e.textContent=txt;return e;}
+function fmt(n){return (n===null||n===undefined||n==='')?'':String(n).replace('.',',');}
+function p2(n){return (n<10?'0':'')+n;}
+function today(){var d=new Date();return d.getFullYear()+'-'+p2(d.getMonth()+1)+'-'+p2(d.getDate());}
+function parse(v,min,max,int){
+  v=String(v===null||v===undefined?'':v).trim().replace(',','.');
+  if(v==='')return null;
+  if(!/^\d+(\.\d+)?$/.test(v))return NaN;
+  var n=Number(v);
+  if(int&&Math.floor(n)!==n)return NaN;
+  if(n<min||n>max)return NaN;
+  return n;
+}
+function act(e,w){return w<=2?Math.min(2,e.sets):e.sets;}
+function sid(w,d){return 's'+w+'-'+d;}
+function bid(w){return 'c'+w;}
+function getS(w,d,mk){var id=sid(w,d),x=DATA.sesiones[id];if(!x&&mk){x=DATA.sesiones[id]={t:0,w:w,d:d,ex:{}};}return x;}
+function getB(w,mk){var id=bid(w),x=DATA.cuerpo[id];if(!x&&mk){x=DATA.cuerpo[id]={t:0,w:w};}return x;}
+function exEnt(x,ei,mk){
+  if(!x)return null;
+  if(!x.ex||typeof x.ex!=='object'){if(!mk)return null;x.ex={};}
+  var o=x.ex[String(ei)];
+  if((!o||typeof o!=='object')&&mk){o=x.ex[String(ei)]={};}
+  return o||null;
+}
+
+/* ---------- almacenamiento local ---------- */
+function load(){
+  try{localStorage.setItem('rc.t','1');localStorage.removeItem('rc.t');}catch(e){lsOK=false;}
+  try{
+    var s=localStorage.getItem(LS);
+    if(s){var o=JSON.parse(s);if(o&&typeof o==='object'&&o.sesiones&&o.cuerpo)DATA=o;}
+  }catch(e){}
+  try{
+    var u=localStorage.getItem(LSUI);
+    if(u){var q=JSON.parse(u);if(q&&q.w>=1&&q.w<=8&&q.d>=0&&q.d<=4){UI.w=q.w|0;UI.d=q.d|0;UI.tab='ses';hasUI=true;}}
+  }catch(e){}
+  if(!hasUI){
+    for(var w=8;w>=1;w--){var f=false;for(var d=0;d<5;d++){if(DATA.sesiones[sid(w,d)]){f=true;break;}}if(f){UI.w=w;break;}}
+    var wd=new Date().getDay();UI.d=(wd>=1&&wd<=5)?wd-1:0;
+  }
+}
+function persist(){try{localStorage.setItem(LS,JSON.stringify(DATA));}catch(e){lsOK=false;setStatus();}}
+function uiSave(){try{localStorage.setItem(LSUI,JSON.stringify(UI));}catch(e){}}
+
+/* ---------- estado visible ---------- */
+function setStatus(){
+  var n=Object.keys(pend).length,t,k;
+  if(n>0&&CL.db&&CL.state!=='ro'){t='Guardando…';k='busy';}
+  else if(!lsOK&&CL.state!=='on'){t='Este navegador no guarda datos: lo que anotes se pierde al cerrar. Descargá el registro antes de salir.';k='bad';}
+  else if(CL.state==='on'){t='Guardado en este dispositivo y en la copia compartida.';k='ok';}
+  else if(CL.state==='read'){t='Conectado a la copia compartida. Se guarda al anotar.';k='ok';}
+  else if(CL.state==='ro'){t='Guardado solo en este dispositivo: esta cuenta no tiene permiso para escribir en la copia compartida.';k='warn';}
+  else if(CL.state==='err'){t='La copia compartida no respondió. Lo anotado queda en este dispositivo y se reintenta al anotar de nuevo.';k='warn';}
+  else if(CL.state==='pending'){t='Conectando con la copia compartida…';k='busy';}
+  else{t='Guardado solo en este dispositivo.';k='warn';}
+  var s=$('#rg-status');if(!s)return;
+  s.setAttribute('data-k',k);
+  s.firstChild.textContent=t;
+}
+var toastT=null;
+function toast(msg){var t=$('#rg-toast');if(!t)return;t.textContent=msg;clearTimeout(toastT);toastT=setTimeout(function(){t.textContent='';},6000);}
+
+/* ---------- copia compartida ---------- */
+function queueWrite(coll,id){
+  if(!CL.db||CL.state==='ro')return;
+  var k=coll+'/'+id;pend[k]=1;
+  clearTimeout(timers[k]);
+  timers[k]=setTimeout(function(){flush(coll,id);},900);
+  setStatus();
+}
+function flush(coll,id){
+  var k=coll+'/'+id;delete timers[k];
+  if(!CL.db||CL.state==='ro'){delete pend[k];setStatus();return;}
+  if(busy[k]){dirty[k]=true;return;}
+  var doc=DATA[coll][id];
+  if(!doc){delete pend[k];setStatus();return;}
+  busy[k]=true;
+  var body=JSON.parse(JSON.stringify(doc));
+  CL.db.doc(k).set(body).then(function(){
+    busy[k]=false;delete retried[k];
+    if(CL.state!=='ro')CL.state='on';
+    if(dirty[k]){dirty[k]=false;flush(coll,id);return;}
+    delete pend[k];setStatus();
+  },function(e){
+    busy[k]=false;
+    var c=e&&e.code;
+    if(c==='invalid_argument'||c==='not_granted'||c==='revoked'||c==='capability_disabled'||c==='capability_removed'||c==='transform_error'){CL.state='ro';}
+    else if(c==='unavailable'&&!retried[k]){retried[k]=true;setTimeout(function(){flush(coll,id);},1200+Math.random()*1200);return;}
+    else{CL.state='err';}
+    delete pend[k];delete retried[k];setStatus();
+  });
+}
+function mergeRemote(coll,id,rd){
+  var ok=coll==='sesiones'?/^s[1-8]-[0-4]$/.test(id):/^c[0-8]$/.test(id);
+  if(!ok||!rd||typeof rd!=='object')return false;
+  var loc=DATA[coll][id],rt=+rd.t||0;
+  if(loc&&(+loc.t||0)>=rt)return false;
+  DATA[coll][id]=JSON.parse(JSON.stringify(rd));
+  return true;
+}
+function subscribe(coll){
+  var first=true;
+  CL.db.collection(coll).onSnapshot(function(snap){
+    var changed=false,remote={};
+    snap.docs.forEach(function(d){
+      if(!d.exists)return;
+      var data=d.data();remote[d.id]=data&&+data.t||0;
+      if(mergeRemote(coll,d.id,data))changed=true;
+    });
+    if(changed){persist();syncLog();}
+    if(first){
+      first=false;
+      if(CL.state==='pending')CL.state='read';
+      Object.keys(DATA[coll]).forEach(function(id){
+        var l=DATA[coll][id];
+        if(l&&+l.t>0&&(!(id in remote)||+l.t>remote[id]))queueWrite(coll,id);
+      });
+    }
+    setStatus();
+  },function(){
+    if(CL.state==='pending'||CL.state==='read'){CL.state='err';}
+    setStatus();
+  });
+}
+function initCloud(){
+  var c=window.claude;
+  if(!c||typeof c.use!=='function'){CL.state='none';setStatus();return;}
+  var to=setTimeout(function(){if(CL.state==='pending'){CL.state='none';setStatus();}},12000);
+  try{
+    c.use('db').then(function(db){
+      clearTimeout(to);
+      if(!db){CL.state='none';setStatus();return;}
+      CL.db=db;
+      try{subscribe('sesiones');subscribe('cuerpo');}catch(e){CL.state='err';}
+      setStatus();
+    },function(){clearTimeout(to);CL.state='none';setStatus();});
+    c.use('downloads').then(function(d){DL=d||null;},function(){});
+  }catch(e){clearTimeout(to);CL.state='none';setStatus();}
+}
+
+/* ---------- cálculos ---------- */
+function planSets(w,d){var n=0;PLAN[d].ex.forEach(function(e){n+=act(e,w);});return n;}
+function doneSets(w,d){
+  var x=DATA.sesiones[sid(w,d)],n=0;
+  if(!x)return 0;
+  PLAN[d].ex.forEach(function(e,ei){
+    var o=exEnt(x,ei,false);if(!o)return;
+    for(var i=1;i<=act(e,w);i++)if(typeof o['r'+i]==='number')n++;
+  });
+  return n;
+}
+function flagTxt(e,o,w){
+  if(!o)return '';
+  var n=act(e,w);
+  for(var i=1;i<=n;i++){
+    var r=o['r'+i];
+    if(typeof r!=='number'||r<e.rmax)return '';
+    if(e.rirm!==null&&e.rirm!==undefined){var q=o['i'+i];if(typeof q!=='number'||q<e.rirm)return '';}
+  }
+  return UP[e.kind]||'';
+}
+function prevTxt(e,ei,w,d){
+  if(w<=1)return '';
+  var o=exEnt(DATA.sesiones[sid(w-1,d)],ei,false);
+  if(!o)return '';
+  var parts=[];
+  for(var i=1;i<=act(e,w-1);i++){
+    var r=o['r'+i],k=o['k'+i];
+    if(typeof r!=='number')continue;
+    parts.push((typeof k==='number'&&k>0?fmt(k)+' kg × ':'')+fmt(r)+(e.u==='s'?' s':''));
+  }
+  return parts.length?'Semana anterior: '+parts.join(' · '):'';
+}
+/* ---------- resúmenes para WhatsApp ---------- */
+var WA='https://wa.me/?text=',RULE='━━━━━━━━━━━━';
+function clean(s){return String(s===undefined||s===null?'':s).replace(/[*~`]/g,'').replace(/_/g,' ').replace(/\s+/g,' ').trim();}
+function fdate(iso,short){
+  var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(typeof iso==='string'?iso:'');
+  return m?(short?m[3]+'/'+m[2]:m[3]+'/'+m[2]+'/'+m[1]):'';
+}
+function hasAny(x){
+  if(!x||typeof x!=='object')return false;
+  var F=['dur','dolor','ener','sue'],a,k,f,o;
+  for(a=0;a<F.length;a++)if(typeof x[F[a]]==='number')return true;
+  if(typeof x.nota==='string'&&x.nota)return true;
+  if(x.ex&&typeof x.ex==='object'){
+    for(k in x.ex){
+      o=x.ex[k];if(!o||typeof o!=='object')continue;
+      for(f in o){
+        if(/^[kri][1-4]$/.test(f)&&typeof o[f]==='number')return true;
+        if(f==='n'&&typeof o[f]==='string'&&o[f])return true;
+      }
+    }
+  }
+  return false;
+}
+function setLine(e,o,i){
+  if(!o)return null;
+  var k=o['k'+i],r=o['r'+i],q=o['i'+i];
+  if(typeof r!=='number'&&typeof k!=='number'&&typeof q!=='number')return null;
+  var t=(typeof k==='number'&&k>0?fmt(k)+' kg × ':'')+(typeof r==='number'?fmt(r)+(e.u==='s'?' s':(typeof k==='number'&&k>0?'':' reps')):'?');
+  if(typeof q==='number')t+=' · RIR '+fmt(q);
+  return t;
+}
+function exCompact(e,o,w,withRir){
+  if(!o)return '';
+  var n=act(e,w),ks=[],rs=[],qs=[],i,r,k,q;
+  for(i=1;i<=n;i++){
+    r=o['r'+i];k=o['k'+i];q=o['i'+i];
+    if(typeof r!=='number'&&typeof k!=='number')continue;
+    rs.push(typeof r==='number'?fmt(r):'?');
+    ks.push(typeof k==='number'&&k>0?k:0);
+    qs.push(typeof q==='number'?fmt(q):'–');
+  }
+  if(!rs.length)return '';
+  var uk=ks.filter(function(v,ix){return ks.indexOf(v)===ix;}),t;
+  if(uk.length===1)t=(uk[0]>0?fmt(uk[0])+' kg × ':'')+rs.join(' · ')+(e.u==='s'?' s':(uk[0]>0?'':' reps'));
+  else t=rs.map(function(v,ix){return (ks[ix]>0?fmt(ks[ix])+' kg × ':'')+v;}).join(' · ')+(e.u==='s'?' s':'');
+  if(withRir&&e.rirm!==null&&e.rirm!==undefined&&qs.some(function(v){return v!=='–';}))t+=' · RIR '+qs.join('/');
+  return t;
+}
+function upTxt(e,o,w){return flagTxt(e,o,w).replace(/^↑\s*/,'');}
+var UPS={peso:'+2,5 kg por mancuerna',corporal:'más repeticiones o un nivel más difícil',tiempo:'más segundos'};
+function upShort(e,o,w){return flagTxt(e,o,w)?(UPS[e.kind]||''):'';}
+function dayText(w,d){
+  var x=DATA.sesiones[sid(w,d)];
+  if(!hasAny(x))return '';
+  var L=[],fd=fdate(x.fecha,false);
+  L.push('🏋️ *Rutina en casa* · Semana '+w);
+  L.push('📅 *'+NAMES[d]+' · '+PLAN[d].t+'*'+(fd?' · '+fd:''));
+  L.push(RULE);L.push('');
+  PLAN[d].ex.forEach(function(e,ei){
+    var o=exEnt(x,ei,false),n=act(e,w),sets=[],any=false,i,s;
+    L.push('*'+(ei+1)+' · '+e.n+'*'+(e.per?' _('+e.per+')_':''));
+    for(i=1;i<=n;i++){s=setLine(e,o,i);if(s)any=true;sets.push(s);}
+    if(!any)L.push('_sin anotar_');
+    else sets.forEach(function(v,ix){L.push('Serie '+(ix+1)+' · '+(v||'sin anotar'));});
+    var fl=upTxt(e,o,w);if(fl)L.push('⬆️ '+fl);
+    var nt=o&&typeof o.n==='string'?clean(o.n):'';if(nt)L.push('📝 _'+nt+'_');
+    L.push('');
+  });
+  L.push(RULE);
+  L.push('✅ *Series:* '+doneSets(w,d)+' de '+planSets(w,d));
+  if(typeof x.dur==='number')L.push('⏱️ *Duración:* '+fmt(x.dur)+' min');
+  if(typeof x.dolor==='number')L.push('🔥 *Dolor lumbar:* '+fmt(x.dolor)+'/10');
+  if(typeof x.ener==='number')L.push('⚡ *Energía:* '+fmt(x.ener)+'/5');
+  if(typeof x.sue==='number')L.push('😴 *Sueño:* '+fmt(x.sue)+' h');
+  if(typeof x.dolor==='number'&&x.dolor>=4)L.push('⚠️ Dolor de 4 o más: revisar antes de la próxima sesión');
+  if(typeof x.dur==='number'&&x.dur>45)L.push('⚠️ Pasó de 45 min');
+  var nota=clean(x.nota);if(nota)L.push('📝 _'+nota+'_');
+  var t=L.join('\n');
+  return t.length>3800?t.slice(0,3790)+'…':t;
+}
+function weekState(w){
+  var n=0,fri=false,max=0,d,ww,has,any;
+  for(d=0;d<5;d++){has=hasAny(DATA.sesiones[sid(w,d)]);if(has){n++;if(d===4)fri=true;}}
+  for(ww=8;ww>=1;ww--){any=false;for(d=0;d<5;d++){if(hasAny(DATA.sesiones[sid(ww,d)])){any=true;break;}}if(any){max=ww;break;}}
+  var wd=new Date().getDay(),weekend=(wd===0||wd===6);
+  return {n:n,closed:n>0&&(fri||w<max||weekend)};
+}
+function weekText(w){
+  var MAXL=3200,lvl,txt='';
+  for(lvl=0;lvl<3;lvl++){txt=weekBuild(w,lvl);if(txt.length<=MAXL)break;}
+  return txt.length>3800?txt.slice(0,3790)+'…':txt;
+}
+function avg(a){if(!a.length)return null;var s=0;a.forEach(function(v){s+=v;});return Math.round(s/a.length*10)/10;}
+function weekBuild(w,lvl){
+  var L=[],d,x,sp=0,sd=0,ns=0,dur=[],ener=[],sue=[],dolMax=null,dolDay='',fechas=[],miss=[],up=[],look=[],notes=[];
+  var days=[];
+  for(d=0;d<5;d++){
+    x=DATA.sesiones[sid(w,d)];sp+=planSets(w,d);sd+=doneSets(w,d);
+    if(!hasAny(x)){miss.push(NAMES[d]);continue;}
+    ns++;days.push(d);
+    if(typeof x.fecha==='string'&&fdate(x.fecha,false))fechas.push(x.fecha);
+    if(typeof x.dur==='number'){dur.push(x.dur);if(x.dur>45)look.push(NAMES[d]+': '+fmt(x.dur)+' min (pasó de 45)');}
+    if(typeof x.ener==='number')ener.push(x.ener);
+    if(typeof x.sue==='number')sue.push(x.sue);
+    if(typeof x.dolor==='number'){
+      if(dolMax===null||x.dolor>dolMax){dolMax=x.dolor;dolDay=NAMES[d];}
+      if(x.dolor>=4)look.push(NAMES[d]+': dolor lumbar '+fmt(x.dolor)+'/10');
+    }
+    var nn=clean(x.nota);if(nn)notes.push(NAMES[d]+': '+nn.slice(0,120));
+    PLAN[d].ex.forEach(function(e,ei){
+      var o=exEnt(x,ei,false),fl=upShort(e,o,w);
+      if(fl)up.push('• '+e.n+' ('+NAMES[d].toLowerCase()+') → '+fl);
+      var en=o&&typeof o.n==='string'?clean(o.n):'';if(en)notes.push(NAMES[d]+' · '+e.n+': '+en.slice(0,120));
+    });
+  }
+  L.push('📊 *Resumen semanal · Semana '+w+'*');
+  var sub='_Rutina en casa_';
+  if(fechas.length){fechas.sort();var f1=fdate(fechas[0],true),f2=fdate(fechas[fechas.length-1],true);sub+=' · '+(f1===f2?f1:f1+' – '+f2);}
+  L.push(sub);L.push(RULE);L.push('');
+  L.push('✅ *Sesiones:* '+ns+' de 5');
+  L.push('💪 *Series:* '+sd+' de '+sp);
+  if(dur.length)L.push('⏱️ *Duración media:* '+fmt(Math.round(avg(dur)))+' min');
+  if(dolMax!==null)L.push('🔥 *Dolor lumbar máx.:* '+fmt(dolMax)+'/10 ('+dolDay.toLowerCase()+')');
+  if(ener.length)L.push('⚡ *Energía media:* '+fmt(avg(ener))+'/5');
+  if(sue.length)L.push('😴 *Sueño medio:* '+fmt(avg(sue))+' h');
+  var cb=DATA.cuerpo[bid(w)],c0=DATA.cuerpo.c0;
+  if(cb&&typeof cb.peso==='number'){
+    var ch='';
+    if(w>0&&c0&&typeof c0.peso==='number'){var dl=Math.round((cb.peso-c0.peso)*10)/10;ch=' ('+(dl>0?'+':'')+fmt(dl)+' kg vs. semana 0)';}
+    L.push('⚖️ *Peso en ayunas:* '+fmt(cb.peso)+' kg'+ch);
+  }
+  L.push('');
+  days.forEach(function(d){
+    x=DATA.sesiones[sid(w,d)];
+    var fd=fdate(x.fecha,true);
+    L.push('*'+NAMES[d]+' · '+PLAN[d].t+'*'+(fd?' · '+fd:'')+' · '+doneSets(w,d)+'/'+planSets(w,d)+' series');
+    if(lvl<2){
+      PLAN[d].ex.forEach(function(e,ei){
+        var c=exCompact(e,exEnt(x,ei,false),w,lvl===0);
+        L.push('• '+e.n+': '+(c||'sin anotar'));
+      });
+    }
+    L.push('');
+  });
+  if(up.length){L.push('⬆️ *Para subir la próxima semana*');up.forEach(function(v){L.push(v);});L.push('');}
+  if(miss.length)look.push('Sin anotar: '+miss.join(', '));
+  if(look.length){L.push('⚠️ *Para mirar*');look.forEach(function(v){L.push('• '+v);});L.push('');}
+  if(notes.length&&lvl<2){L.push('📝 *Notas*');notes.slice(0,6).forEach(function(v){L.push('• '+v);});L.push('');}
+  while(L.length&&L[L.length-1]==='')L.pop();
+  return L.join('\n');
+}
+function derive(){
+  var w=UI.w,d=UI.d,x=DATA.sesiones[sid(w,d)];
+  PLAN[d].ex.forEach(function(e,ei){
+    var nd=nodes[ei];if(!nd)return;
+    var o=exEnt(x,ei,false);
+    nd.flag.textContent=flagTxt(e,o,w);
+    var p=prevTxt(e,ei,w,d);
+    nd.prev.textContent=p;
+  });
+  var al=$('#rg-alert');
+  if(al){
+    var dol=x&&typeof x.dolor==='number'?x.dolor:null,du=x&&typeof x.dur==='number'?x.dur:null,m=[];
+    if(dol!==null&&dol>=4)m.push('Dolor de 4 o más: frená y mirá la sección Reglas (cuándo frenar y consultar).');
+    if(du!==null&&du>45)m.push('Pasó de 45 minutos: la próxima vez sacá 1 serie de un ejercicio de 4.');
+    al.textContent=m.join(' ');
+  }
+  var wp=0,wd=0;
+  for(var dd=0;dd<5;dd++){wp+=planSets(w,dd);wd+=doneSets(w,dd);}
+  var pr=$('#rg-prog');
+  if(pr)pr.textContent='Semana '+w+': '+wd+' de '+wp+' series anotadas · '+NAMES[d]+': '+doneSets(w,d)+' de '+planSets(w,d);
+  $$('#rg-pick [data-w]').forEach(function(c){
+    var cw=+c.getAttribute('data-w'),p2_=0,d2=0;
+    for(var k=0;k<5;k++){p2_+=planSets(cw,k);d2+=doneSets(cw,k);}
+    c.classList.toggle('done',p2_>0&&d2>=p2_);
+  });
+  updateWA();
+  deriveBody();
+}
+function setLink(a,tx){
+  if(!a)return;
+  a.setAttribute('href',tx?WA+encodeURIComponent(tx):'#');
+  a.setAttribute('aria-disabled',tx?'false':'true');
+}
+function updateWA(){
+  var w=UI.w,d=UI.d,tx=dayText(w,d),a=$('#rg-wa'),n=$('#rg-wa-n');
+  setLink(a,tx);
+  if(n)n.textContent=tx?'Se abre WhatsApp con el resumen de este día ya escrito; elegís a quién mandarlo. Sirve también como copia de lo anotado.':'Anotá al menos una serie, o los datos de la sesión, para poder enviar el resumen del día.';
+  var ws=weekState(w),wk=$('#rg-wa-w'),wn=$('#rg-wa-wn'),tw=ws.closed?weekText(w):'';
+  setLink(wk,tw);
+  if(wn){
+    if(tw)wn.textContent='Semana '+w+' terminada: '+ws.n+' de 5 sesiones anotadas. Se abre WhatsApp con el resumen de toda la semana; elegís a quién mandarlo.';
+    else if(ws.n===0)wn.textContent='Todavía no hay sesiones anotadas en la semana '+w+'.';
+    else wn.textContent='Se habilita cuando termina la semana: al anotar el viernes, el sábado o domingo, o cuando empieces la semana siguiente.';
+  }
+}
+function deriveBody(){
+  var rows=$$('#rg-body .rg-br'),b0=DATA.cuerpo.c0;
+  var F=[['peso','peso','kg'],['muslo','muslo','cm'],['cadera','cadera','cm'],['cintura','cintura','cm']];
+  rows.forEach(function(r){
+    var w=+r.getAttribute('data-w'),b=DATA.cuerpo[bid(w)],parts=[];
+    if(w>0&&b&&b0){
+      F.forEach(function(f){
+        if(typeof b[f[0]]==='number'&&typeof b0[f[0]]==='number'){
+          var dl=Math.round((b[f[0]]-b0[f[0]])*10)/10;
+          parts.push(f[1]+' '+(dl>0?'+':'')+fmt(dl)+' '+f[2]);
+        }
+      });
+    }
+    r.querySelector('.chg').textContent=parts.length?'Cambio desde la semana 0: '+parts.join(' · '):'';
+  });
+}
+
+/* ---------- construcción de la pantalla ---------- */
+function inp(f,attrs,cls){
+  var i=el('input','in'+(cls?' '+cls:''));
+  i.type='text';i.autocomplete='off';i.spellcheck=false;
+  i.inputMode=attrs.mode||'text';
+  if(attrs.max)i.maxLength=attrs.max;
+  i.setAttribute('data-t',attrs.t);i.setAttribute('data-f',f);
+  if(attrs.e!==undefined)i.setAttribute('data-e',attrs.e);
+  if(attrs.s!==undefined)i.setAttribute('data-s',attrs.s);
+  if(attrs.w!==undefined)i.setAttribute('data-w',attrs.w);
+  if(attrs.lab)i.setAttribute('aria-label',attrs.lab);
+  if(attrs.ph)i.placeholder=attrs.ph;
+  return i;
+}
+function field(text,input,wide){
+  var l=el('label','fld'+(wide?' wide':''));
+  l.appendChild(el('span',null,text));l.appendChild(input);return l;
+}
+function waRow(id,label,kind){
+  var r=el('div','rg-wa-row'),a=el('a','rg-wa',label);
+  a.id=id;a.href='#';a.target='_blank';a.rel='noopener noreferrer';a.setAttribute('aria-disabled','true');
+  r.appendChild(a);
+  var b=el('button','linkbtn','Copiar texto');b.type='button';b.setAttribute('data-copy',kind);
+  r.appendChild(b);
+  return r;
+}
+function renderLog(){
+  var box=$('#rg-ses');box.textContent='';nodes=[];
+  var w=UI.w,d=UI.d,day=PLAN[d];
+  var h=el('div','rg-dayh');
+  h.appendChild(el('h3',null,NAMES[d]+' · '+day.t));
+  h.appendChild(el('span','meta','Semana '+w+(w<=2?' · adaptación':' · series completas, RIR 1–2')));
+  box.appendChild(h);
+  if(w<=2){
+    var ad=el('div','rg-adapt');
+    ad.appendChild(el('b',null,'Semanas 1 y 2: adaptación. '));
+    ad.appendChild(document.createTextNode('Se hacen 2 series de cada ejercicio, con 3 repeticiones en reserva (RIR 3). Las series restantes de la rutina figuran abajo, pero se empiezan en la semana 3.'));
+    box.appendChild(ad);
+  }
+  var list=el('div','rg-exs');
+  day.ex.forEach(function(e,ei){
+    var n=act(e,w),card=el('div','rg-ex'),top=el('div','rg-ex-h');
+    top.appendChild(el('span','no',String(ei+1)));
+    var tt=el('div','rg-ex-t'),a=el('a',null,e.n);
+    a.href='#ej-'+e.g;a.setAttribute('data-go',e.g);
+    tt.appendChild(el('div','nm')).appendChild(a);
+    var adapt=w<=2&&n<e.sets;
+    tt.appendChild(el('div','plan',(adapt?n+' series de '+e.sets+' programadas · ':e.sets+' × ')+e.rmin+'–'+e.rmax+(e.u==='s'?' s':'')+(e.per?' '+e.per:'')+' · '+(e.rir?'RIR '+(w<=2?'3':e.rir):'sin RIR')+' · kg: '+e.kg));
+    if(e.note)tt.appendChild(el('div','nt',e.note));
+    top.appendChild(tt);card.appendChild(top);
+    var prev=el('div','prev');card.appendChild(prev);
+    var g=el('div','rg-sets');
+    ['Serie','Kg',e.u==='s'?'Seg':'Reps','RIR'].forEach(function(x){g.appendChild(el('span','lab',x));});
+    for(var i=1;i<=n;i++){
+      g.appendChild(el('span','sn',String(i)));
+      g.appendChild(inp('k',{t:'ex',e:ei,s:i,mode:'decimal',max:5,lab:e.n+', serie '+i+', kilos',ph:e.kind==='corporal'?'0':''}));
+      g.appendChild(inp('r',{t:'ex',e:ei,s:i,mode:'numeric',max:3,lab:e.n+', serie '+i+(e.u==='s'?', segundos':', repeticiones')}));
+      if(e.rirm===null||e.rirm===undefined)g.appendChild(el('span','na','—'));
+      else g.appendChild(inp('i',{t:'ex',e:ei,s:i,mode:'numeric',max:1,lab:e.n+', serie '+i+', RIR'}));
+    }
+    for(var q=n+1;q<=e.sets;q++){
+      var sn=el('span','sn off',String(q));sn.setAttribute('aria-hidden','true');g.appendChild(sn);
+      g.appendChild(el('span','offtxt','Se empieza en la semana 3'));
+    }
+    card.appendChild(g);
+    if(e.per)card.appendChild(el('div','hint','Por pierna o por lado: anotá lo que hizo la más débil (la otra repite lo mismo).'));
+    var flag=el('div','flag');flag.setAttribute('aria-live','polite');card.appendChild(flag);
+    card.appendChild(inp('n',{t:'ex',e:ei,max:300,lab:e.n+', nota',ph:'Nota (opcional)'},'txt'));
+    nodes[ei]={flag:flag,prev:prev};
+    list.appendChild(card);
+  });
+  box.appendChild(list);
+  var s=el('div','rg-ses');
+  s.appendChild(el('h4',null,'Al terminar la sesión'));
+  var f=el('div','rg-fields');
+  var di=inp('fecha',{t:'ses',lab:'Fecha'},'txt');di.type='date';di.inputMode='none';
+  f.appendChild(field('Fecha',di));
+  f.appendChild(field('Duración (min)',inp('dur',{t:'ses',mode:'numeric',max:3,lab:'Duración en minutos'})));
+  f.appendChild(field('Dolor lumbar máx. (0–10)',inp('dolor',{t:'ses',mode:'numeric',max:2,lab:'Dolor lumbar máximo de 0 a 10'})));
+  f.appendChild(field('Energía (1–5)',inp('ener',{t:'ses',mode:'numeric',max:1,lab:'Energía de 1 a 5'})));
+  f.appendChild(field('Sueño anoche (h)',inp('sue',{t:'ses',mode:'decimal',max:4,lab:'Horas de sueño anoche'})));
+  f.appendChild(field('Notas de la sesión',inp('nota',{t:'ses',max:300,lab:'Notas de la sesión'},'txt'),true));
+  s.appendChild(f);
+  var al=el('div','rg-alert');al.id='rg-alert';al.setAttribute('aria-live','polite');s.appendChild(al);
+  s.appendChild(waRow('rg-wa','Enviar resumen por WhatsApp','day'));
+  var nn=el('p','rg-wa-note','');nn.id='rg-wa-n';s.appendChild(nn);
+  box.appendChild(s);
+  var wk=el('div','rg-ses rg-week');
+  wk.appendChild(el('h4',null,'Resumen de la semana '+w));
+  wk.appendChild(waRow('rg-wa-w','Resumen semanal por WhatsApp','week'));
+  var wn=el('p','rg-wa-note','');wn.id='rg-wa-wn';wk.appendChild(wn);
+  box.appendChild(wk);
+  syncInputs(box);
+  derive();
+}
+function renderBody(){
+  var box=$('#rg-body');box.textContent='';
+  var intro=el('p','small','Peso en ayunas una vez por semana, siempre el mismo día. Medidas y foto cada 4 semanas (semanas 0, 4 y 8), con la misma luz. La semana 0 es el punto de partida.');
+  intro.style.marginBottom='1rem';box.appendChild(intro);
+  for(var w=0;w<=8;w++){
+    var meas=(w===0||w===4||w===8);
+    var r=el('div','rg-br');r.setAttribute('data-w',w);
+    r.appendChild(el('h4',null,w===0?'Semana 0 · punto de partida':'Semana '+w));
+    var f=el('div','rg-fields');
+    var di=inp('fecha',{t:'b',w:w,lab:'Fecha, semana '+w},'txt');di.type='date';di.inputMode='none';
+    f.appendChild(field('Fecha',di));
+    f.appendChild(field('Peso en ayunas (kg)',inp('peso',{t:'b',w:w,mode:'decimal',max:5,lab:'Peso en ayunas, semana '+w})));
+    if(meas){
+      f.appendChild(field('Muslo (cm)',inp('muslo',{t:'b',w:w,mode:'decimal',max:5,lab:'Muslo en centímetros, semana '+w})));
+      f.appendChild(field('Cadera (cm)',inp('cadera',{t:'b',w:w,mode:'decimal',max:5,lab:'Cadera en centímetros, semana '+w})));
+      f.appendChild(field('Cintura (cm)',inp('cintura',{t:'b',w:w,mode:'decimal',max:5,lab:'Cintura en centímetros, semana '+w})));
+      var sel=el('select','in');
+      ['','Sí','No'].forEach(function(o){var op=el('option',null,o||'—');op.value=o;sel.appendChild(op);});
+      sel.setAttribute('data-t','b');sel.setAttribute('data-f','foto');sel.setAttribute('data-w',w);sel.setAttribute('aria-label','Foto tomada, semana '+w);
+      f.appendChild(field('Foto',sel));
+    }
+    f.appendChild(field('Notas',inp('nota',{t:'b',w:w,max:300,lab:'Notas, semana '+w},'txt'),true));
+    r.appendChild(f);
+    r.appendChild(el('div','chg'));
+    box.appendChild(r);
+  }
+  syncInputs(box);deriveBody();
+}
+
+/* ---------- valores guardados -> pantalla ---------- */
+function stored(t){
+  var d=t.dataset,f=d.f;
+  if(d.t==='b'){var b=DATA.cuerpo[bid(+d.w)];return b?b[f]:undefined;}
+  var x=DATA.sesiones[sid(UI.w,UI.d)];
+  if(!x)return undefined;
+  if(d.t==='ex'){var o=exEnt(x,+d.e,false);return o?o[f==='n'?'n':f+d.s]:undefined;}
+  return x[f];
+}
+function show(v){return (v===undefined||v===null)?'':(typeof v==='number'?fmt(v):String(v));}
+function syncInputs(scope){
+  $$('[data-t]',scope).forEach(function(t){
+    if(t===document.activeElement)return;
+    var s=show(stored(t));
+    if(t.value!==s)t.value=s;
+    t.removeAttribute('aria-invalid');
+  });
+}
+function syncLog(){
+  var s=$('#rg-ses'),b=$('#rg-body');
+  if(s&&s.firstChild)syncInputs(s);
+  if(b&&b.firstChild)syncInputs(b);
+  derive();
+}
+
+/* ---------- edición ---------- */
+var persistAsked=false;
+function askPersist(){
+  if(!WEB||persistAsked)return;persistAsked=true;
+  try{if(navigator.storage&&navigator.storage.persist)navigator.storage.persist().then(function(){},function(){});}catch(e){}
+}
+function touch(coll,id,doc){doc.t=Date.now();persist();queueWrite(coll,id);askPersist();}
+function onField(t,commit){
+  var d=t.dataset;if(!d||!d.t)return;
+  var f=d.f,spec=SPEC[f],v;
+  if(spec){
+    v=parse(t.value,spec[0],spec[1],spec[2]);
+    if(v!==v){if(commit){t.value=show(stored(t));t.removeAttribute('aria-invalid');}else{t.setAttribute('aria-invalid','true');}return;}
+  }else{v=String(t.value||'').slice(0,300);if(v==='')v=null;}
+  t.removeAttribute('aria-invalid');
+  var coll,id,doc,holder,key;
+  if(d.t==='b'){coll='cuerpo';id=bid(+d.w);doc=getB(+d.w,true);holder=doc;key=f;}
+  else{
+    coll='sesiones';id=sid(UI.w,UI.d);doc=getS(UI.w,UI.d,true);
+    if(d.t==='ex'){holder=exEnt(doc,+d.e,true);key=f==='n'?'n':f+d.s;}
+    else{holder=doc;key=f;}
+  }
+  var cur=holder[key];
+  if(commit&&v!==null&&spec&&typeof v==='number'){t.value=fmt(v);}
+  if((cur===undefined||cur===null)&&v===null)return;
+  if(cur===v)return;
+  if(v===null)delete holder[key];else holder[key]=v;
+  if(f!=='fecha'&&v!==null&&!doc.fecha){
+    doc.fecha=today();
+    var fi=$('[data-t="'+(d.t==='b'?'b':'ses')+'"][data-f="fecha"]'+(d.t==='b'?'[data-w="'+d.w+'"]':''));
+    if(fi&&fi!==document.activeElement)fi.value=doc.fecha;
+  }
+  touch(coll,id,doc);
+  derive();
+}
+
+/* ---------- exportar ---------- */
+function tcell(v){
+  v=v===undefined||v===null?'':String(v);
+  if(/^[=+@\-]/.test(v))v="'"+v;
+  return v;
+}
+function csvCell(v){return /[";\r\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v;}
+function toText(rows,tsv){
+  return rows.map(function(r){return r.map(function(c){c=String(c);return tsv?c.replace(/[\t\r\n]+/g,' '):csvCell(c);}).join(tsv?'\t':';');}).join('\r\n');
+}
+function rowsSeries(){
+  var out=[['Semana','Día','Fecha','Ejercicio','Serie','Kg','Reps o seg','RIR','Nota del ejercicio']];
+  for(var w=1;w<=8;w++)for(var d=0;d<5;d++){
+    var x=DATA.sesiones[sid(w,d)];if(!x)continue;
+    PLAN[d].ex.forEach(function(e,ei){
+      var o=exEnt(x,ei,false);if(!o)return;
+      for(var i=1;i<=4;i++){
+        if(o['k'+i]===undefined&&o['r'+i]===undefined&&o['i'+i]===undefined)continue;
+        out.push([w,NAMES[d],tcell(x.fecha),e.n,i,fmt(o['k'+i]),fmt(o['r'+i]),fmt(o['i'+i]),i===1?tcell(o.n):'']);
+      }
+      if(o.n&&o['k1']===undefined&&o['r1']===undefined&&o['i1']===undefined)out.push([w,NAMES[d],tcell(x.fecha),e.n,'','','','',tcell(o.n)]);
+    });
+  }
+  return out;
+}
+function rowsSes(){
+  var out=[['Semana','Día','Sesión','Fecha','Duración (min)','Dolor lumbar máx. (0-10)','Energía (1-5)','Sueño anoche (h)','Notas']];
+  for(var w=1;w<=8;w++)for(var d=0;d<5;d++){
+    var x=DATA.sesiones[sid(w,d)];if(!x)continue;
+    out.push([w,NAMES[d],PLAN[d].t,tcell(x.fecha),fmt(x.dur),fmt(x.dolor),fmt(x.ener),fmt(x.sue),tcell(x.nota)]);
+  }
+  return out;
+}
+function rowsBody(){
+  var out=[['Semana','Fecha','Peso en ayunas (kg)','Muslo (cm)','Cadera (cm)','Cintura (cm)','Foto','Notas']];
+  for(var w=0;w<=8;w++){
+    var b=DATA.cuerpo[bid(w)];if(!b)continue;
+    out.push([w,tcell(b.fecha),fmt(b.peso),fmt(b.muslo),fmt(b.cadera),fmt(b.cintura),tcell(b.foto),tcell(b.nota)]);
+  }
+  return out;
+}
+function copyOut(rows,label){
+  var text=toText(rows,true),ta=$('#rg-out');
+  ta.value=text;ta.hidden=false;
+  var done=function(){toast(label+': copiado. Pegalo en una hoja de cálculo.');};
+  var manual=function(){ta.focus();ta.select();toast('No se pudo descargar ni copiar solo. El texto está abajo: seleccionalo y copialo.');};
+  try{
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(done,manual);}
+    else manual();
+  }catch(e){manual();}
+}
+function copyText(btn){
+  var kind=btn.getAttribute('data-copy'),text=kind==='week'?(weekState(UI.w).closed?weekText(UI.w):''):dayText(UI.w,UI.d);
+  var old=btn.getAttribute('data-l')||btn.textContent;btn.setAttribute('data-l',old);
+  var row=btn.parentNode,box=row.parentNode,prev=box.querySelector('textarea.rg-copy');if(prev)prev.parentNode.removeChild(prev);
+  if(!text){btn.textContent=kind==='week'?'Todavía no disponible':'Nada para copiar';setTimeout(function(){btn.textContent=old;},2500);return;}
+  var done=function(){btn.textContent='Copiado ✓';setTimeout(function(){btn.textContent=old;},2500);};
+  var manual=function(){
+    var ta=el('textarea','rg-copy');ta.readOnly=true;ta.value=text;ta.setAttribute('aria-label','Texto del resumen para copiar');
+    box.appendChild(ta);ta.focus();ta.select();btn.textContent='Seleccioná y copiá';
+  };
+  try{
+    if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(text).then(done,manual);
+    else manual();
+  }catch(err){manual();}
+}
+function webSave(rows,file,label){
+  try{
+    var blob=new Blob(['\ufeff'+toText(rows,false)],{type:'text/csv;charset=utf-8'});
+    var u=URL.createObjectURL(blob),a=document.createElement('a');
+    a.href=u;a.download=file;a.rel='noopener';a.hidden=true;document.body.appendChild(a);a.click();
+    setTimeout(function(){if(a.parentNode)a.parentNode.removeChild(a);URL.revokeObjectURL(u);},2000);
+    toast(label+': se descargó '+file+'. Si no la ves, revisá la carpeta de descargas del navegador.');
+    return true;
+  }catch(e){return false;}
+}
+function exportRows(rows,file,label){
+  if(rows.length<2){toast('Todavía no hay nada anotado para '+label.toLowerCase()+'.');return;}
+  if(DL&&typeof DL.save==='function'){
+    DL.save({filename:file,data:'﻿'+toText(rows,false)}).then(function(){toast(label+': archivo guardado.');},function(e){
+      if(e&&e.code==='declined')return;
+      copyOut(rows,label);
+    });
+  }else if(WEB&&webSave(rows,file,label)){return;}
+  else copyOut(rows,label);
+}
+
+/* ---------- selección ---------- */
+function setTab(t){
+  UI.tab=t==='body'?'body':'ses';uiSave();
+  $$('.rtab').forEach(function(b){b.setAttribute('aria-selected',b.getAttribute('data-rt')===UI.tab?'true':'false');});
+  $('#rg-ses').hidden=UI.tab!=='ses';
+  $('#rg-body').hidden=UI.tab!=='body';
+  $('#rg-pick').hidden=UI.tab!=='ses';
+  $('#rg-prog').hidden=UI.tab!=='ses';
+  if(UI.tab==='body'&&!$('#rg-body').firstChild)renderBody();
+}
+function pickChips(){
+  $$('#rg-pick [data-w]').forEach(function(c){c.setAttribute('aria-pressed',+c.getAttribute('data-w')===UI.w?'true':'false');});
+  $$('#rg-pick [data-d]').forEach(function(c){c.setAttribute('aria-pressed',+c.getAttribute('data-d')===UI.d?'true':'false');});
+}
+function select(w,d){
+  if(w)UI.w=w;
+  if(d!==undefined&&d!==null)UI.d=d;
+  uiSave();pickChips();renderLog();
+}
+
+/* ---------- eventos ---------- */
+root.addEventListener('input',function(e){onField(e.target,false);});
+root.addEventListener('change',function(e){onField(e.target,true);});
+root.addEventListener('click',function(e){
+  if(e.target&&e.target.closest&&e.target.closest('#rg-wa,#rg-wa-w'))return;
+  var t=e.target&&e.target.closest?e.target.closest('button'):null;
+  if(!t)return;
+  if(t.hasAttribute('data-copy')){copyText(t);return;}
+  if(t.hasAttribute('data-w')&&t.closest('#rg-pick')){select(+t.getAttribute('data-w'),null);}
+  else if(t.hasAttribute('data-d')&&t.closest('#rg-pick')){select(null,+t.getAttribute('data-d'));}
+  else if(t.hasAttribute('data-rt')){setTab(t.getAttribute('data-rt'));}
+  else if(t.hasAttribute('data-x')){
+    var k=t.getAttribute('data-x');
+    if(k==='series')exportRows(rowsSeries(),'series-rutina.csv','Series');
+    else if(k==='ses')exportRows(rowsSes(),'sesiones-rutina.csv','Sesiones');
+    else exportRows(rowsBody(),'cuerpo-rutina.csv','Cuerpo');
+  }
+});
+document.addEventListener('click',function(e){
+  var b=e.target&&e.target.closest?e.target.closest('[data-log]'):null;
+  if(!b)return;
+  e.preventDefault();
+  UI.tab='ses';setTab('ses');
+  select(null,+b.getAttribute('data-log'));
+  try{window.scrollTo({top:Math.max(0,root.getBoundingClientRect().top+(window.pageYOffset||document.documentElement.scrollTop||0)-64),behavior:'smooth'});}catch(x){}
+});
+
+try{
+  if(WEB){
+    var st0=$('#rg-status'),tip=el('p','small','Para entrar más rápido, agregá esta página a la pantalla de inicio desde el menú del navegador y abrila siempre desde ahí. Lo anotado se guarda en este celular y navegador.');
+    tip.style.margin='.6rem 0 0';if(st0&&st0.parentNode)st0.parentNode.insertBefore(tip,st0.nextSibling);
+  }
+  load();
+  pickChips();
+  setTab(UI.tab);
+  renderLog();
+  setStatus();
+  initCloud();
+}catch(err){
+  var st=document.getElementById('rg-status');
+  if(st){st.setAttribute('data-k','bad');st.firstChild.textContent='No se pudo iniciar el registro ('+(err&&err.message?err.message:'error')+'). Recargá la página.';}
+}
+})();
+</script>
+<footer><div class="wrap"><p class="small" style="padding:1.5rem 0 2.5rem">Versión de la página: 22/11/2026 12:18</p></div></footer>
+</body>
+</html>
